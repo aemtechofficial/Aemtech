@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { ServicesPage, PortfolioPage, AboutPage, BlogPage, ContactPage, SingleServicePage, CaseStudyPage } from './pages';
 import { allServices } from './serviceData';
 import { allCaseStudies } from './caseStudyData';
@@ -1289,6 +1290,9 @@ export default function App() {
         </svg>
         <span className="stp-arrow">↑</span>
       </button>
+
+      {/* ═══ VERCEL SPEED INSIGHTS ═══ */}
+      <SpeedInsights />
     </>
   );
 }
