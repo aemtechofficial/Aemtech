@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { ServicesPage, PortfolioPage, AboutPage, BlogPage, ContactPage, SingleServicePage, CaseStudyPage } from './pages';
 import { allServices } from './serviceData';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { allCaseStudies } from './caseStudyData';
 
 /* ═══════════════════════════════════════
