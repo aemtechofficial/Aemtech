@@ -75,10 +75,8 @@ function PageHero({ eyebrow, title, desc, goTo, breadcrumb }: { eyebrow: string;
   return (
     <section className="cs-cinematic-hero">
       <div className="cch-bg">
-        <div className="cch-gradient" style={{ background: 'radial-gradient(ellipse at 50% 30%, rgba(245,197,66,0.12) 0%, transparent 60%)' }} />
+        <div className="cch-gradient" style={{ background: 'radial-gradient(ellipse at 50% 30%, rgba(245,197,66,0.07) 0%, transparent 55%)' }} />
         <div className="cch-grid" />
-        <div className="cch-orb cch-orb-1" style={{ background: 'var(--gold)' }} />
-        <div className="cch-orb cch-orb-2" style={{ background: '#1a3a5c' }} />
       </div>
       <div className="container" style={{ position: 'relative', zIndex: 3 }}>
         <div className="page-hero-breadcrumb">
@@ -548,11 +546,6 @@ export function SingleServicePage({ goTo, slug }: PageProps & { slug: string }) 
         <div className="sh-glow" />
         <div className="sh-glow-2" />
         <div className="sh-grid" />
-        <div className="sh-particles">
-          {[...Array(6)].map((_, i) => <div key={i} className="sh-particle" style={{ animationDelay: `${i * 0.5}s` }} />)}
-        </div>
-        <div className="sh-orbit-1" />
-        <div className="sh-orbit-2" />
         
         <div className="container">
           {/* Breadcrumb */}
@@ -998,10 +991,8 @@ export function CaseStudyPage({ goTo, slug }: PageProps & { slug: string }) {
     {/* ═══ CINEMATIC HERO ═══ */}
     <section className="cs-cinematic-hero">
       <div className="cch-bg">
-        <div className="cch-gradient" style={{ background: `radial-gradient(ellipse at 50% 30%, ${cs.brandColors[1]}22 0%, transparent 60%)` }} />
+        <div className="cch-gradient" style={{ background: `radial-gradient(ellipse at 50% 30%, ${cs.brandColors[1]}12 0%, transparent 55%)` }} />
         <div className="cch-grid" />
-        <div className="cch-orb cch-orb-1" style={{ background: cs.brandColors[1] || 'var(--gold)' }} />
-        <div className="cch-orb cch-orb-2" style={{ background: cs.brandColors[0] || 'var(--ink)' }} />
       </div>
       <div className="container" style={{ position: 'relative', zIndex: 3 }}>
         <div className="page-hero-breadcrumb">

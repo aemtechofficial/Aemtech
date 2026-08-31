@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { ServicesPage, PortfolioPage, AboutPage, BlogPage, ContactPage, SingleServicePage, CaseStudyPage } from './pages';
 import { allServices } from './serviceData';
+import { allCaseStudies } from './caseStudyData';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
-import { allCaseStudies } from './caseStudyData';
 
 /* ═══════════════════════════════════════
    HOOKS
@@ -513,9 +513,7 @@ export default function App() {
         <section className="hero section-pad" id="home">
           {/* Hero Background Effects */}
           <div className="hero-bg-effects" aria-hidden="true">
-            <div className="hero-gradient" />
             <div className="hero-grid-pattern" />
-            {[...Array(5)].map((_, i) => <div key={i} className="hero-particle" style={{ animationDelay: `${i * 0.8}s` }} />)}
           </div>
           
           <div className="container hero-grid">
@@ -750,16 +748,24 @@ export default function App() {
           </div>
         </section>
 
-        {/* ═══ TRUST STRIP 2 ═══ */}
-        <div className="trust-strip">
-          <div className="container">
-            <div className="trust-strip-inner">
-              {['Brand Strategy First','Original Creative Work','Marketing Focused','Channel Consistent','Mobile Optimized','Growth Ready'].map(t =>
-                <div key={t}>{t}</div>
-              )}
+        {/* ═══ QUICK CTA BAND — INSPIRED VISITOR HOOK ═══ */}
+        <section className="quick-cta-band">
+          <div className="container quick-cta-inner">
+            <div className="quick-cta-copy">
+              <h2>Have a project <span>in mind?</span></h2>
+              <p>You've seen the work. Now get a proposal with scope, timeline, and pricing — no long forms required.</p>
+            </div>
+            <div className="quick-cta-actions">
+              <a className="btn btn-gold btn-glow" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Get Free Proposal <span>→</span></a>
+              <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp <span>💬</span></a>
+            </div>
+            <div className="quick-cta-proof">
+              <span>☎ Same Day Reply</span>
+              <span>🎯 Custom Scope</span>
+              <span>💯 No Obligation</span>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* PROCESS: PREMIUM */}
         <section className="process-section section-pad">
@@ -983,27 +989,9 @@ export default function App() {
                 ))}
               </div>
             </R>
-          </div>
-        </section>
-
-        {/* ═══ HOW TO START ═══ */}
-        <section className="section-pad" style={{ borderTop: '1px solid var(--line-soft)', background: 'var(--ink)' }}>
-          <div className="container">
-            <R className="center-head">
-              <p className="eyebrow">Getting started</p>
-              <h2>Start Your Project in <span>3 Simple Steps</span></h2>
-              <p>No long forms. No complicated processes. Just a quick conversation.</p>
-            </R>
-            <div className="timeline" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
-              <R><article><span>01</span><h3>Book a Free Call</h3><p>15-minute discovery call. We discuss your brand, goals, and timeline. Zero pressure.</p></article></R>
-              <R><article><span>02</span><h3>Get Your Proposal</h3><p>Within 48 hours, you receive a clear plan with scope, timeline, and investment details.</p></article></R>
-              <R><article><span>03</span><h3>We Build & Launch</h3><p>We design, you review, we refine. Regular updates until your project goes live.</p></article></R>
-            </div>
             <R>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: 24, marginTop: 42, flexWrap: 'wrap' }}>
-                {['🛡️ NDA Protected', '💬 Direct Communication', '⚡ Same Day Reply', '✓ On-Time Delivery'].map(b =>
-                  <span key={b} style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 600 }}>{b}</span>
-                )}
+              <div className="faq-cta-note">
+                <span>Still unsure?</span> Skip the scrolling — <a href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>ask us directly</a> or <a href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp us</a> for a fast answer.
               </div>
             </R>
           </div>
@@ -1014,10 +1002,6 @@ export default function App() {
           <div className="fcp-bg">
             <div className="fcp-gradient" />
             <div className="fcp-grid" />
-            <div className="fcp-orbs">
-              <div className="fcp-orb fcp-orb-1" />
-              <div className="fcp-orb fcp-orb-2" />
-            </div>
           </div>
           <R className="container fcp-content">
             <p className="eyebrow">Ready for premium growth?</p>
