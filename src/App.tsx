@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { ServicesPage, PortfolioPage, AboutPage, BlogPage, ContactPage, SingleServicePage, CaseStudyPage } from './pages';
 import { allServices } from './serviceData';
 import { allCaseStudies } from './caseStudyData';
+import { Icon } from './designIcons';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
 
@@ -563,7 +564,7 @@ export default function App() {
                 <div className="dashboard-card floating-card main-dashboard">
                   <div className="card-top">
                     <div><span>Campaign Reach</span><strong>2.4M</strong><em>+38.6%</em></div>
-                    <b>↗</b>
+                    <b><Icon name="↗" size={20} /></b>
                   </div>
                   <div className="chart-lines"><i /><i /><i /><i /><i /><i /></div>
                   <div className="channel-row"><div>Content</div><div>Meta</div><div>Google</div><div>Email</div></div>
@@ -571,13 +572,13 @@ export default function App() {
                 <div className="metric-card floating-card metric-one"><span>Qualified Leads</span><strong>1,842</strong><em>+18.7%</em></div>
                 <div className="metric-card floating-card metric-two"><span>Return on Ad Spend</span><strong>4.8x</strong><em>+1.4x</em></div>
                 <div className="mockup-card floating-card mockup-one">
-                  <span style={{ fontSize: 32, color: 'var(--gold)', opacity: 0.4 }}>♕</span>
+                  <Icon name="♕" size={28} />
                 </div>
                 <div className="mockup-card floating-card mockup-two">
-                  <span style={{ fontSize: 32, color: 'var(--gold)', opacity: 0.4 }}>✦</span>
+                  <Icon name="✦" size={28} />
                 </div>
                 <div className="mockup-card floating-card mockup-three">
-                  <span style={{ fontSize: 32, color: 'var(--gold)', opacity: 0.4 }}>◇</span>
+                  <Icon name="◇" size={28} />
                 </div>
               </div>
             </R>
@@ -625,7 +626,7 @@ export default function App() {
                 <R key={i}>
                   <div className="why-card-premium">
                     <div className="wcp-icon-wrap">
-                      <span className="wcp-icon">{w.icon}</span>
+                      <span className="wcp-icon"><Icon name={w.icon} size={24} /></span>
                       <span className="wcp-num">{w.n}</span>
                     </div>
                     <h3>{w.title}</h3>
@@ -757,12 +758,12 @@ export default function App() {
             </div>
             <div className="quick-cta-actions">
               <a className="btn btn-gold btn-glow" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Get Free Proposal <span>→</span></a>
-              <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp <span>💬</span></a>
+              <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp <span><Icon name="💬" size={16} /></span></a>
             </div>
             <div className="quick-cta-proof">
-              <span>☎ Same Day Reply</span>
-              <span>🎯 Custom Scope</span>
-              <span>💯 No Obligation</span>
+              <span><Icon name="⚡" size={13} style={{ verticalAlign:'-2px',marginRight:2 }} /> Same Day Reply</span>
+              <span><Icon name="🧑‍💼" size={13} style={{ verticalAlign:'-2px',marginRight:2 }} /> Custom Scope</span>
+              <span><Icon name="💯" size={13} style={{ verticalAlign:'-2px',marginRight:2 }} /> No Obligation</span>
             </div>
           </div>
         </section>
@@ -786,7 +787,7 @@ export default function App() {
               ].map((s, i) => (
                 <R key={s.n}>
                   <div className={`process-step ${i % 2 === 0 ? 'left' : 'right'}`}>
-                    <div className="ps-number"><span>{s.icon}</span></div>
+                    <div className="ps-number"><span><Icon name={s.icon} size={22} /></span></div>
                     <div className="ps-connector" />
                     <div className="ps-card">
                       <div className="ps-step-badge">{s.n}</div>
@@ -942,6 +943,7 @@ export default function App() {
                       { icon: '⚡', title: 'Direct Access' },
                       { icon: '↗', title: 'Growth Focus' },
                       { icon: '✦', title: 'Long-Term' },
+
                     ].map(v => (
                       <div key={v.title} className="fcv-item">
                         <span>{v.icon}</span>
@@ -953,7 +955,7 @@ export default function App() {
                   {/* CTAs */}
                   <div className="fc-actions-new">
                     <a className="btn btn-gold" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Work With Me <span>→</span></a>
-                    <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp <span>💬</span></a>
+                    <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp <span><Icon name="💬" size={16} /></span></a>
                   </div>
 
                   {/* Social Proof */}
@@ -1009,12 +1011,12 @@ export default function App() {
             <p>Turn your ideas into a distinctive brand, compelling creative, and a marketing system built to grow.</p>
             <div className="fcp-actions">
               <a className="btn btn-gold btn-glow" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Start Your Project <span>→</span></a>
-              <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp Chat <span>💬</span></a>
+              <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp Chat <span><Icon name="💬" size={16} /></span></a>
             </div>
             <div className="fcp-trust">
-              <span>🛡️ NDA Protected</span>
-              <span>⚡ Same Day Reply</span>
-              <span>💯 Clear Scope</span>
+              <span><Icon name="🛡" size={14} /> NDA Protected</span>
+              <span><Icon name="⚡" size={14} /> Same Day Reply</span>
+              <span><Icon name="💯" size={14} /> Clear Scope</span>
             </div>
           </R>
         </section>
@@ -1043,7 +1045,7 @@ export default function App() {
                   {/* Quick Contact Cards */}
                   <div className="cs-cards">
                     <a href="mailto:aemtechofficial@gmail.com" className="cs-card">
-                      <div className="cs-card-icon">✉</div>
+                      <div className="cs-card-icon"><Icon name="✉" size={20} /></div>
                       <div className="cs-card-body">
                         <small>Email Us</small>
                         <strong>aemtechofficial@gmail.com</strong>
@@ -1051,7 +1053,7 @@ export default function App() {
                       <span className="cs-card-arrow">→</span>
                     </a>
                     <a href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer" className="cs-card cs-card-wa">
-                      <div className="cs-card-icon">💬</div>
+                      <div className="cs-card-icon"><Icon name="💬" size={20} /></div>
                       <div className="cs-card-body">
                         <small>WhatsApp (Fastest)</small>
                         <strong>0331-0009519</strong>
@@ -1059,7 +1061,7 @@ export default function App() {
                       <span className="cs-card-arrow">→</span>
                     </a>
                     <a href="tel:+923310009519" className="cs-card">
-                      <div className="cs-card-icon">📞</div>
+                      <div className="cs-card-icon"><Icon name="📞" size={20} /></div>
                       <div className="cs-card-body">
                         <small>Call Us</small>
                         <strong>0331-0009519</strong>
@@ -1067,7 +1069,7 @@ export default function App() {
                       <span className="cs-card-arrow">→</span>
                     </a>
                     <div className="cs-card">
-                      <div className="cs-card-icon">📍</div>
+                      <div className="cs-card-icon"><Icon name="📍" size={20} /></div>
                       <div className="cs-card-body">
                         <small>Location</small>
                         <strong>Karachi, Pakistan</strong>
@@ -1085,11 +1087,11 @@ export default function App() {
                   </div>
 
                   {/* Trust Badges */}
-                  <div className="cs-trust-badges">
-                    <div><span>🛡️</span> NDA Protected</div>
-                    <div><span>⚡</span> Same Day Reply</div>
-                    <div><span>💯</span> Free Consultation</div>
-                    <div><span>🎯</span> Custom Proposal</div>
+<div className="cs-trust-badges">
+                    <div><span><Icon name="🛡" size={16} /></span> NDA Protected</div>
+                    <div><span><Icon name="⚡" size={16} /></span> Same Day Reply</div>
+                    <div><span><Icon name="💯" size={16} /></span> Free Consultation</div>
+                    <div><span><Icon name="🧑‍💼" size={16} /></span> Custom Proposal</div>
                   </div>
                 </div>
               </R>
@@ -1236,7 +1238,7 @@ export default function App() {
 
       {/* ═══ WHATSAPP FLOAT ═══ */}
       <a href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer" className="wa-float" aria-label="Chat on WhatsApp">
-        <span className="wa-icon">💬</span>
+        <span className="wa-icon"><Icon name="💬" size={16} /></span>
         <span>Chat with us</span>
         <span className="wa-pulse" />
       </a>
@@ -1253,7 +1255,7 @@ export default function App() {
               <br /><br />
               In the meantime, feel free to <a href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)', fontWeight: 700 }}>chat on WhatsApp</a> for a quicker response.
             </p>
-            <button className="btn btn-gold popup-btn" onClick={() => setFormSent(false)}>Got It <span>✓</span></button>
+            <button className="btn btn-gold popup-btn" onClick={() => setFormSent(false)}>Got It <span><Icon name="✓" size={16} /></span></button>
           </div>
         </div>
       )}

@@ -4,6 +4,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { allServices } from './serviceData';
 import { allCaseStudies } from './caseStudyData';
+import { Icon } from './designIcons';
 
 function useAnimatedNumber(target: number, decimals: number, inView: boolean) {
   const [value, setValue] = useState(0);
@@ -299,7 +300,7 @@ export function AboutPage({ goTo }: PageProps) {
               <div className="cds-card cds-solution" style={{ marginBottom: 0 }}>
                 <div className="cds-stripe" style={{ background: 'var(--gold)' }} />
                 <div className="cds-number">{v.n}</div>
-                <div className="cds-icon">{v.icon}</div>
+                <div className="cds-icon"><Icon name={v.icon} size={22} /></div>
                 <h3>{v.title}</h3>
                 <p>{v.desc}</p>
               </div>
@@ -321,7 +322,7 @@ export function AboutPage({ goTo }: PageProps) {
           ].map((s, i) => (
             <R key={s.year}>
               <div className={`at-item ${i % 2 === 0 ? 'left' : 'right'}`}>
-                <div className="at-marker"><span>{s.icon}</span></div>
+                <div className="at-marker"><span><Icon name={s.icon} size={20} /></span></div>
                 <div className="at-card">
                   <div className="at-year">{s.year}</div>
                   <h3>{s.title}</h3>
@@ -445,10 +446,10 @@ export function ContactPage({ goTo }: PageProps) {
                   <div><strong>Currently Available</strong><span>Accepting new projects</span></div>
                 </div>
                 <div className="cs-trust-badges">
-                  <div><span>🛡️</span> NDA Protected</div>
-                  <div><span>⚡</span> Same Day Reply</div>
-                  <div><span>💯</span> Free Consultation</div>
-                  <div><span>🎯</span> Custom Proposal</div>
+                  <div><span><Icon name="🛡" size={16} /></span> NDA Protected</div>
+                  <div><span><Icon name="⚡" size={16} /></span> Same Day Reply</div>
+                  <div><span><Icon name="💯" size={16} /></span> Free Consultation</div>
+                  <div><span><Icon name="🧑‍💼" size={16} /></span> Custom Proposal</div>
                 </div>
               </div>
             </R>
@@ -456,7 +457,7 @@ export function ContactPage({ goTo }: PageProps) {
             <R>
               {sent ? (
                 <div className="cs-form-wrap" style={{ textAlign: 'center', padding: 48 }}>
-                  <div style={{ fontSize: 56, marginBottom: 16 }}>✓</div>
+                  <div style={{ fontSize: 56, marginBottom: 16, color: 'var(--gold)' }}><Icon name="✓" size={48} /></div>
                   <h3 style={{ fontSize: 22 }}>Message Sent!</h3>
                   <p style={{ color: 'var(--muted)', marginTop: 12, lineHeight: 1.7 }}>We'll get back to you within <strong style={{ color: '#fff' }}>24 hours</strong>.</p>
                   <div style={{ display: 'flex', gap: 10, justifyContent: 'center', marginTop: 24 }}>
@@ -580,7 +581,7 @@ export function SingleServicePage({ goTo, slug }: PageProps & { slug: string }) 
             {/* CTAs */}
             <div className="sh-actions">
               <button className="btn btn-gold" onClick={() => goTo('contact')}>Start Your Project <span>→</span></button>
-              <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp Chat <span>💬</span></a>
+              <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp Chat <span><Icon name="💬" size={14} /></span></a>
             </div>
             
             {/* Trust Badges */}
@@ -917,21 +918,21 @@ export function SingleServicePage({ goTo, slug }: PageProps & { slug: string }) 
               <h4>📞 Let's Talk</h4>
               <div className="sc-items">
                 <a href="mailto:aemtechofficial@gmail.com">
-                  <span>✉</span>
+                  <span><Icon name="✉" size={18} /></span>
                   <div>
                     <small>Email</small>
                     <strong>aemtechofficial@gmail.com</strong>
                   </div>
                 </a>
                 <a href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">
-                  <span>💬</span>
+                  <span><Icon name="💬" size={18} /></span>
                   <div>
                     <small>WhatsApp</small>
                     <strong>0331-0009519</strong>
                   </div>
                 </a>
                 <div className="sc-item">
-                  <span>📍</span>
+                  <span><Icon name="📍" size={18} /></span>
                   <div>
                     <small>Location</small>
                     <strong>Karachi, Pakistan</strong>
@@ -1001,16 +1002,16 @@ export function CaseStudyPage({ goTo, slug }: PageProps & { slug: string }) {
           <span style={{ color: 'var(--gold)' }}>{cs.name}</span>
         </div>
         <div className="cch-content">
-          {isZabs && <div className="cch-flag">🌍 First International Project</div>}
+          {isZabs && <div className="cch-flag"><Icon name="🌍" size={16} style={{ display:'inline-block',verticalAlign:'middle',marginRight:6 }} />First International Project</div>}
           <div className="cch-category">{cs.category}</div>
           <h1 className="cch-title">{cs.name}</h1>
           <p className="cch-tagline">{cs.tagline}</p>
           
           {/* Meta Pills */}
           <div className="cch-meta">
-            <div className="cch-pill"><span>📍</span>{cs.industry}</div>
-            <div className="cch-pill"><span>⏱</span>{cs.duration}</div>
-            <div className="cch-pill"><span>📅</span>{cs.year}</div>
+            <div className="cch-pill"><span><Icon name="📍" size={14} /></span>{cs.industry}</div>
+            <div className="cch-pill"><span><Icon name="⏱" size={14} /></span>{cs.duration}</div>
+            <div className="cch-pill"><span><Icon name="📅" size={14} /></span>{cs.year}</div>
           </div>
 
           {/* CTAs */}
@@ -1058,14 +1059,14 @@ export function CaseStudyPage({ goTo, slug }: PageProps & { slug: string }) {
           <R><div className="cds-card cds-challenge">
             <div className="cds-stripe" style={{ background: '#ff6b6b' }} />
             <div className="cds-number">01</div>
-            <div className="cds-icon">💀</div>
+            <div className="cds-icon"><Icon name="💀" size={22} /></div>
             <h3>The Challenge</h3>
             <p>{cs.challenge}</p>
           </div></R>
           <R><div className="cds-card cds-solution">
             <div className="cds-stripe" style={{ background: 'var(--gold)' }} />
             <div className="cds-number">02</div>
-            <div className="cds-icon">✨</div>
+            <div className="cds-icon"><Icon name="✨" size={22} /></div>
             <h3>Our Solution</h3>
             <p>{cs.solution}</p>
           </div></R>
@@ -1078,15 +1079,15 @@ export function CaseStudyPage({ goTo, slug }: PageProps & { slug: string }) {
       <R className="center-head"><p className="eyebrow">Transformation</p><h2>Before vs <span>After</span></h2></R>
       <R><div className="cs-ba-grid">
         <div className="cs-ba-card cs-ba-before">
-          <div className="cs-ba-label">✗ BEFORE</div>
+          <div className="cs-ba-label"><Icon name="⚡" size={12} style={{ verticalAlign:'-1px',marginRight:4 }} />BEFORE</div>
           <h4>WordPress Template</h4>
           {['Generic Elementor template', 'Only 5-6 basic sections', 'Zero animations', 'No WhatsApp integration', '"AI Specialists" copy-paste error', 'Heavy & slow on mobile', 'No SEO optimization', 'No testimonials or FAQ'].map(item => (
-            <div key={item} className="cs-ba-item bad"><span>✗</span>{item}</div>
+<div key={item} className="cs-ba-item bad"><span>✕</span>{item}</div>
           ))}
         </div>
         <div className="cs-ba-vs">VS</div>
         <div className="cs-ba-card cs-ba-after">
-          <div className="cs-ba-label">✓ AFTER</div>
+            <div className="cs-ba-label"><Icon name="✨" size={12} style={{ verticalAlign:'-1px',marginRight:4 }} />AFTER</div>
           <h4>Custom React + Vite</h4>
           {['15+ premium custom sections', 'Animated hero with parallax', 'Glass-morphism + animated stats', 'WhatsApp + Web3Forms integration', 'Success popup with call actions', 'Blazing fast on all devices', 'Full SEO + Schema.org markup', 'Testimonials + FAQ + Process'].map(item => (
             <div key={item} className="cs-ba-item good"><span>✓</span>{item}</div>
