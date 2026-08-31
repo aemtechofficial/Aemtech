@@ -1,0 +1,19 @@
+{
+  "name": "AEMTECH Creative & Marketing Agency",
+  "short_name": "AEMTECH",
+  "id": "/",
+  "description": "Creative, branding, marketing and digital services for ambitious brands.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/aemtech-favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
