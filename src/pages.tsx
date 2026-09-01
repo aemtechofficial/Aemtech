@@ -186,7 +186,7 @@ export function PortfolioPage({ goTo }: PageProps) {
       <div className="trust-strip" style={{ background: 'var(--ink)' }}>
         <div className="container">
           <div className="trust-strip-inner">
-            {['10+ Projects Delivered', '100% Client Satisfaction', 'Pakistan & International', '5.0 Average Rating'].map(t => <div key={t}>{t}</div>)}
+            {['10+ Real Project Deliveries', 'Client Retention', 'Local + International Clients', 'Enduring Relationships'].map(t => <div key={t}>{t}</div>)}
           </div>
         </div>
       </div>
@@ -489,10 +489,7 @@ export function ContactPage({ goTo }: PageProps) {
                       <div className="cs-field"><label htmlFor="page-contact-name">Your Name *</label><input id="page-contact-name" type="text" name="name" placeholder="e.g. Fawaz Faisal" autoComplete="name" required /></div>
                       <div className="cs-field"><label htmlFor="page-contact-email">Email Address *</label><input id="page-contact-email" type="email" name="email" placeholder="you@company.com" autoComplete="email" required /></div>
                     </div>
-                    <div className="cs-form-row">
-                      <div className="cs-field"><label htmlFor="page-project-type">Project Type</label><input id="page-project-type" type="text" name="project_type" placeholder="e.g. Branding, Social Media, Campaign" /></div>
-                      <div className="cs-field"><label htmlFor="page-project-budget">Budget Range</label><input id="page-project-budget" type="text" name="budget" placeholder="e.g. $500 - $2,000" /></div>
-                    </div>
+                  <div className="cs-field"><label htmlFor="page-project-type">What are you looking for?</label><input id="page-project-type" type="text" name="project_type" placeholder="e.g. Branding, Social Media, Website" /></div>
                     <div className="cs-field"><label htmlFor="page-project-details">Project Details *</label><textarea id="page-project-details" name="message" placeholder="Tell us about your goals, timeline, and specific requirements..." required /></div>
                     <button className="btn btn-gold btn-glow" type="submit" disabled={sending} aria-busy={sending} style={{ width: '100%' }}>
                       {sending ? 'Sending...' : <>Send Message <span>→</span></>}

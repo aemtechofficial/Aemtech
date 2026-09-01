@@ -313,8 +313,8 @@ export default function App() {
 
   // Testimonial auto
   const testimonials = [
-    { stars: '★★★★★', text: '"The website exceeded our expectations. The design feels premium, the animations are smooth, and the contact experience was a highlight."', ini: 'ZI', name: 'ZABS International', role: 'Houston, Texas' },
-    { stars: '★★★★★', text: '"AEMTECH translated our ideas into a clear brand and a polished digital experience. The process felt thoughtful from start to finish."', ini: 'MS', name: 'MS Stationery', role: 'Branding + Ecommerce' },
+    { stars: '★★★★★', text: '"It was a Friday night demo. Instead of explaining slides, Fawaz opened the live contact form and sent a test email — it arrived instantly to my inbox with a branded success overlay. That polished transition convinced me to approve immediately."', ini: 'ZI', name: 'ZABS International', role: 'Houston Recycle Exporter (First Demo)' },
+    { stars: '★★★★★', text: '"fckin delivered two days ahead of schedule. The Shopify experience wasn\'t just colorful decoration — packaging inquiry button, bulk flow, responsive text placement came from their UX thinking and rationale clarity" ', ini: 'MS', name: 'MS Stationery', role: 'Branding + Ecommerce' },
     { stars: '★★★★★', text: '"Strong creative direction, clear communication, and work designed around the business rather than a generic template."', ini: 'AR', name: 'Ahsan R.', role: 'Founder, TechNova' },
   ];
   useEffect(() => { const t = setInterval(() => setTestimonialIdx(i => (i + 1) % testimonials.length), 5200); return () => clearInterval(t); }, []);
@@ -526,7 +526,7 @@ export default function App() {
               </div>
               <p className="hero-brand">AEMTECH</p>
               <h1>Creative ideas and marketing systems built for <span className="typed-wrap"><span ref={heroTypedRef}>Attention.</span><span className="typed-cursor">|</span></span></h1>
-              <p className="hero-lead">A premium creative and marketing agency shaping memorable brands, high-impact campaigns, social content, websites, and ecommerce experiences for Pakistani and international clients.</p>
+              <p className="hero-lead">Nearly invisible brands lose customer trust within seconds. We create work that earns attention, builds credibility, and drives meaningful action — locally in Karachi and internationally with careful execution.</p>
               <div className="hero-actions">
                 <a className="btn btn-gold btn-glow" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Start Your Project <span>→</span></a>
                 <a className="btn btn-glass" href="/portfolio" onClick={e => { e.preventDefault(); goTo('portfolio'); }}>View Portfolio <span>▶</span></a>
@@ -602,7 +602,7 @@ export default function App() {
         <div className="trust-strip">
           <div className="container">
             <div className="trust-strip-inner">
-              {['Quality Projects Delivered','Growing Clientele','100% Client Satisfaction','Pakistan & International','Premium Quality Only'].map(t =>
+              {['Quality Projects Delivered','Work Consistency','Client Relationship','Karachi Local + Abroad Delivery','Quality Over Quantity'].map(t =>
                 <div key={t}>{t}</div>
               )}
             </div>
@@ -644,7 +644,7 @@ export default function App() {
         <section className="services section-pad" id="services">
           <div className="container">
             <R className="section-head">
-              <div><p className="eyebrow">What we do</p><h2>Creative, Marketing & Digital Services</h2></div>
+              <div><p className="eyebrow">What we do</p><h2>What Growth Actually Looks Like</h2></div>
               <a className="btn btn-outline" href="/services" onClick={e => { e.preventDefault(); goTo('services'); }}>View All <span>→</span></a>
             </R>
             <div className="services-grid-premium">
@@ -679,7 +679,7 @@ export default function App() {
             <R className="center-head">
               <p className="eyebrow">Our portfolio</p>
               <h2>Work That Speaks For <span>Itself</span></h2>
-              <p>Selected projects showcasing premium design and real business results.</p>
+              <p>Selected projects where actual clients saw measurable shifts — revenue, engagement, and perception.</p>
             </R>
             {/* FEATURED CASE STUDY */}
             <R>
@@ -753,15 +753,15 @@ export default function App() {
         <section className="quick-cta-band">
           <div className="container quick-cta-inner">
             <div className="quick-cta-copy">
-              <h2>Have a project <span>in mind?</span></h2>
-              <p>You've seen the work. Now get a proposal with scope, timeline, and pricing — no long forms required.</p>
+              <h2>Ready to move from <span>"doing okay"</span> to doing exceptional?</h2>
+              <p>We've shown you our methodology and real client outcomes. Within 24 hours of your message, you'll get an exact roadmap — scope, timeline, dependencies, and price breakdown. No vague promises, just a plan to execute.</p>
             </div>
             <div className="quick-cta-actions">
               <a className="btn btn-gold btn-glow" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Get Free Proposal <span>→</span></a>
               <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp <span><Icon name="💬" size={16} /></span></a>
             </div>
             <div className="quick-cta-proof">
-              <span><Icon name="⚡" size={13} style={{ verticalAlign:'-2px',marginRight:2 }} /> Same Day Reply</span>
+              <span><Icon name="⚡" size={13} style={{ verticalAlign:'-2px',marginRight:2 }} /> Within 24hr Response</span>
               <span><Icon name="🧑‍💼" size={13} style={{ verticalAlign:'-2px',marginRight:2 }} /> Custom Scope</span>
               <span><Icon name="💯" size={13} style={{ verticalAlign:'-2px',marginRight:2 }} /> No Obligation</span>
             </div>
@@ -837,7 +837,7 @@ export default function App() {
               <div className="testimonials-header">
                 <div>
                   <p className="eyebrow">Client Reviews</p>
-                  <h2>What Our Clients <span>Say</span></h2>
+                  <h2>How Clients Actually Describe Working With Us</h2>
                 </div>
                 <div className="testimonial-controls">
                   <button onClick={() => setTestimonialIdx(i => (i - 1 + testimonials.length) % testimonials.length)} aria-label="Previous testimonial">←</button>
@@ -928,12 +928,12 @@ export default function App() {
                   
                   <div className="fc-quote">
                     <span className="fc-quote-mark">"</span>
-                    <p>I believe every business deserves a premium digital presence, not only established brands. AEMTECH makes that quality accessible without compromising the work.</p>
+                    <p>I believe businesses deserve premium creative and marketing support — not only established brands. But I'm also daily learning from standout international companies like Apple, Tesla, Amex and their website/proposals how confidence closes without pressure. AEMTECH makes that aspiration accessible without compromising craft.</p>
                   </div>
 
                   <div className="fc-story">
-                    <p>AEMTECH started as AEMTECH Institute, where I taught digital skills. That experience showed me how many businesses struggle to present and market themselves effectively, so I built the agency to solve that problem.</p>
-                    <p>I lead every project personally from strategy through final delivery. Your project receives direct attention and clear creative direction.</p>
+                    <p>AEMTECH started as AEMTECH Institute, teaching digital skills. It taught me how often investors fund agencies that promise generic beauty and deliver nothing meaningful. My expertise doesn't cover everything. Every week I test interface render techniques from Apple, Tesla, Amex and yes I still make mistakes. Those mistakes plus yours become entry-points to collaborate so projects never become excuses involving junior interns, time-permitting templates, or masked subcontract.</p>
+                    <p>I personally lead every project from initial brief to final delivery. Nothing else.</p>
                   </div>
 
                   {/* Values Grid */}
@@ -972,7 +972,7 @@ export default function App() {
         {/* ═══ FAQ ═══ */}
         <section className="faq section-pad">
           <div className="container narrow">
-            <R className="center-head"><p className="eyebrow">FAQ</p><h2>Questions Before We Start?</h2></R>
+            <R className="center-head"><p className="eyebrow">FAQ</p><h2>What Smart Questions Should You Ask a Creative Partner?</h2></R>
             <R>
               <div className="accordion">
                 {[
@@ -1089,8 +1089,8 @@ export default function App() {
                   {/* Trust Badges */}
 <div className="cs-trust-badges">
                     <div><span><Icon name="🛡" size={16} /></span> NDA Protected</div>
-                    <div><span><Icon name="⚡" size={16} /></span> Same Day Reply</div>
-                    <div><span><Icon name="💯" size={16} /></span> Free Consultation</div>
+                    <div><span><Icon name="⚡" size={16} /></span> 24hr Response</div>
+                    <div><span><Icon name="💯" size={16} /></span> Free Discovery Call</div>
                     <div><span><Icon name="🧑‍💼" size={16} /></span> Custom Proposal</div>
                   </div>
                 </div>
@@ -1130,16 +1130,10 @@ export default function App() {
                         <input type="email" id="contact-email" name="email" placeholder="you@company.com" required aria-label="Email address" autoComplete="email" />
                       </div>
                     </div>
-                    <div className="cs-form-row">
-                      <div className="cs-field">
-                        <label htmlFor="contact-project-type">Project Type</label>
-                        <input type="text" id="contact-project-type" name="project_type" placeholder="e.g. Brand Identity, Social Media, Campaign" aria-label="Project type" />
-                      </div>
-                      <div className="cs-field">
-                        <label htmlFor="contact-budget">Budget Range</label>
-                        <input type="text" id="contact-budget" name="budget" placeholder="e.g. $500 - $2,000" aria-label="Budget range" />
-                      </div>
-                    </div>
+                  <div className="cs-field">
+                    <label htmlFor="contact-project-type">What are you looking for?</label>
+                    <input type="text" id="contact-project-type" name="project_type" placeholder="e.g. Brand Identity, Social Media, Website" aria-label="What are you looking for" />
+                  </div>
                     <div className="cs-field">
                       <label htmlFor="contact-details">Project Details *</label>
                       <textarea id="contact-details" name="message" placeholder="Tell us about your goals, timeline, and specific requirements..." required aria-label="Project details" />
