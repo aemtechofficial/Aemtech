@@ -110,7 +110,7 @@ export function ServicesPage({ goTo }: PageProps) {
       <div className="cs-impact-bar">
         <div className="container">
           <div className="cib-grid">
-            {[{ v: '12+', l: 'Services' }, { v: '100%', l: 'Custom Work' }, { v: '12hr', l: 'Avg Reply' }, { v: '5.0', l: 'Rating' }].map(s => (
+            {[{ v: '12+', l: 'Services' }, { v: '100%', l: 'Custom Work' }, { v: '12hr', l: 'Avg Reply' }, { v: '3+', l: 'Years' }].map(s => (
               <div key={s.l} className="cib-item"><strong style={{ color: 'var(--gold)' }}>{s.v}</strong><span>{s.l}</span></div>
             ))}
           </div>
@@ -264,7 +264,7 @@ export function AboutPage({ goTo }: PageProps) {
       <div className="cs-impact-bar">
         <div className="container">
           <div className="cib-grid">
-            {[{ v: '10+', l: 'Projects' }, { v: '100%', l: 'Satisfaction' }, { v: '2+', l: 'Countries' }, { v: '5.0', l: 'Rating' }].map(s => (
+            {[{ v: '10+', l: 'Projects' }, { v: '100%', l: 'Satisfaction' }, { v: '2+', l: 'Countries' }, { v: '3+', l: 'Years' }].map(s => (
               <div key={s.l} className="cib-item"><strong style={{ color: 'var(--gold)' }}>{s.v}</strong><span>{s.l}</span></div>
             ))}
           </div>
@@ -891,22 +891,6 @@ export function SingleServicePage({ goTo, slug }: PageProps & { slug: string }) 
                 <div><span>⚡</span> 24hr response time</div>
                 <div><span>🎯</span> Custom proposal</div>
                 <div><span>💯</span> No obligation</div>
-              </div>
-            </div>
-
-            {/* Client Review Card */}
-            <div className="sidebar-review">
-              <div className="sr-header">
-                <span className="sr-badge">💬 Client Review</span>
-                <div className="sr-stars">★★★★★</div>
-              </div>
-              <p>"AEMTECH delivered exactly what we needed. Professional, fast, and premium quality work."</p>
-              <div className="sr-footer">
-                <div className="sr-rating">
-                  <strong>5.0</strong>
-                  <span>/ 5 Rating</span>
-                </div>
-                <div className="sr-source">Verified Client</div>
               </div>
             </div>
 
