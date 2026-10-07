@@ -313,9 +313,8 @@ export default function App() {
 
   // Testimonial auto
   const testimonials = [
-    { stars: '★★★★★', text: '"It was a Friday night demo. Instead of explaining slides, Fawaz opened the live contact form and sent a test email — it arrived instantly to my inbox with a branded success overlay. That polished transition convinced me to approve immediately."', ini: 'ZI', name: 'ZABS International', role: 'Houston Recycle Exporter (First Demo)' },
-    { stars: '★★★★★', text: '"fckin delivered two days ahead of schedule. The Shopify experience wasn\'t just colorful decoration — packaging inquiry button, bulk flow, responsive text placement came from their UX thinking and rationale clarity" ', ini: 'MS', name: 'MS Stationery', role: 'Branding + Ecommerce' },
-    { stars: '★★★★★', text: '"Strong creative direction, clear communication, and work designed around the business rather than a generic template."', ini: 'AR', name: 'Ahsan R.', role: 'Founder, TechNova' },
+    { stars: '★★★★★', text: '"It was a Friday night demo. Instead of explaining slides, Fawaz opened the live contact form and sent a test email, it arrived instantly in my inbox with a branded success overlay. That polished transition convinced me to approve immediately."', ini: 'ZI', name: 'ZABS International', role: 'Houston Recycle Exporter (First Demo)' },
+    { stars: '★★★★★', text: '"Delivered two days ahead of schedule. The Shopify experience wasn\'t just colorful decoration, the packaging inquiry button, bulk flow, and responsive text placement all came from real UX thinking."', ini: 'MS', name: 'MS Stationery', role: 'Branding + Ecommerce' },
   ];
   useEffect(() => { const t = setInterval(() => setTestimonialIdx(i => (i + 1) % testimonials.length), 5200); return () => clearInterval(t); }, []);
 
@@ -526,7 +525,7 @@ export default function App() {
               </div>
               <p className="hero-brand">AEMTECH</p>
               <h1>Creative ideas and marketing systems built for <span className="typed-wrap"><span ref={heroTypedRef}>Attention.</span><span className="typed-cursor">|</span></span></h1>
-              <p className="hero-lead">Nearly invisible brands lose customer trust within seconds. We create work that earns attention, builds credibility, and drives meaningful action — locally in Karachi and internationally with careful execution.</p>
+              <p className="hero-lead">Nearly invisible brands lose customer trust within seconds. We create work that earns attention, builds credibility, and drives meaningful action, in Karachi and for clients worldwide.</p>
               <div className="hero-actions">
                 <a className="btn btn-gold btn-glow" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Start Your Project <span>→</span></a>
                 <a className="btn btn-glass" href="/portfolio" onClick={e => { e.preventDefault(); goTo('portfolio'); }}>View Portfolio <span>▶</span></a>
@@ -559,26 +558,31 @@ export default function App() {
             </R>
             <R>
               <div className="hero-visual" ref={heroVisualRef}>
-                <div className="orbit orbit-one" />
-                <div className="orbit orbit-two" />
-                <div className="dashboard-card floating-card main-dashboard">
-                  <div className="card-top">
-                    <div><span>Campaign Reach</span><strong>2.4M</strong><em>+38.6%</em></div>
-                    <b><Icon name="↗" size={20} /></b>
+                <div className="cmd-wrap">
+                  <div className="cmd-dash">
+                    <div className="cmd-bar">
+                      <span className="cmd-dot" /><span className="cmd-dot" /><span className="cmd-dot" />
+                      <span className="cmd-title">AEMTECH COMMAND</span>
+                      <span className="cmd-live"><span className="cmd-pulse" />LIVE</span>
+                    </div>
+                    <div className="cmd-body">
+                      <div className="cmd-row"><span className="cmd-name">Meta</span><div className="cmd-track"><span className="cmd-fill" style={{ '--w': '82%' } as React.CSSProperties} /></div></div>
+                      <div className="cmd-row"><span className="cmd-name">Google</span><div className="cmd-track"><span className="cmd-fill" style={{ '--w': '64%' } as React.CSSProperties} /></div></div>
+                      <div className="cmd-row"><span className="cmd-name">Email</span><div className="cmd-track"><span className="cmd-fill" style={{ '--w': '47%' } as React.CSSProperties} /></div></div>
+                      <svg className="cmd-spark" viewBox="0 0 300 80" preserveAspectRatio="none" aria-hidden="true">
+                        <defs><linearGradient id="cmd-sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#f5c542" stopOpacity=".45" /><stop offset="1" stopColor="#f5c542" stopOpacity="0" /></linearGradient></defs>
+                        <path d="M0,62 L30,55 L60,58 L90,44 L120,48 L150,34 L180,38 L210,24 L240,28 L270,14 L300,18 L300,80 L0,80 Z" fill="url(#cmd-sg)" />
+                        <polyline points="0,62 30,55 60,58 90,44 120,48 150,34 180,38 210,24 240,28 270,14 300,18" fill="none" stroke="#f5c542" strokeWidth="2.5" />
+                      </svg>
+                      <div className="cmd-kpis">
+                        <div className="cmd-kpi"><span>REACH</span><div className="cmd-kbar"><i style={{ '--w': '78%' } as React.CSSProperties} /></div></div>
+                        <div className="cmd-kpi"><span>LEADS</span><div className="cmd-kbar"><i style={{ '--w': '56%' } as React.CSSProperties} /></div></div>
+                        <div className="cmd-kpi"><span>SALES</span><div className="cmd-kbar"><i style={{ '--w': '88%' } as React.CSSProperties} /></div></div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="chart-lines"><i /><i /><i /><i /><i /><i /></div>
-                  <div className="channel-row"><div>Content</div><div>Meta</div><div>Google</div><div>Email</div></div>
-                </div>
-                <div className="metric-card floating-card metric-one"><span>Qualified Leads</span><strong>1,842</strong><em>+18.7%</em></div>
-                <div className="metric-card floating-card metric-two"><span>Return on Ad Spend</span><strong>4.8x</strong><em>+1.4x</em></div>
-                <div className="mockup-card floating-card mockup-one">
-                  <Icon name="♕" size={28} />
-                </div>
-                <div className="mockup-card floating-card mockup-two">
-                  <Icon name="✦" size={28} />
-                </div>
-                <div className="mockup-card floating-card mockup-three">
-                  <Icon name="◇" size={28} />
+                  <div className="cmd-float cmd-f1 floating-card"><span className="cmd-pulse" /><div><strong>New project inquiry</strong><span>WhatsApp, just now</span></div></div>
+                  <div className="cmd-float cmd-f2 floating-card"><span className="cmd-pulse" /><div><strong>Campaign live</strong><span>All systems go</span></div></div>
                 </div>
               </div>
             </R>
@@ -679,7 +683,7 @@ export default function App() {
             <R className="center-head">
               <p className="eyebrow">Our portfolio</p>
               <h2>Work That Speaks For <span>Itself</span></h2>
-              <p>Selected projects where actual clients saw measurable shifts — revenue, engagement, and perception.</p>
+              <p>Selected projects where real clients saw measurable shifts in revenue, engagement, and perception.</p>
             </R>
             {/* FEATURED CASE STUDY */}
             <R>
@@ -700,7 +704,7 @@ export default function App() {
                     <ul className="pf-metrics">
                       <li><strong>90+</strong><span>Lighthouse Performance</span></li>
                       <li><strong>15+</strong><span>Custom Sections</span></li>
-                      <li><strong>1st</strong><span>Client Approval</span></li>
+                      <li><strong>1st</strong><span>Demo Approved</span></li>
                     </ul>
                     <span className="pf-cta">Read Full Case Study <span className="pf-cta-arrow">→</span></span>
                   </div>
@@ -717,9 +721,10 @@ export default function App() {
                 { cat: 'Marketing System', name: 'FitFuel', sub: 'Fitness Supplements', stat: 'Full', statLabel: 'Growth Funnel', color: '#ff6b9d', cs: '' },
               ].map((p, i) => (
                 <R key={i}>
-                  <article className="portfolio-card-premium" onMouseMove={handleTilt} onMouseLeave={resetTilt}>
+                  <article className="portfolio-card-premium" style={{ '--pc': p.color } as React.CSSProperties} onMouseMove={handleTilt} onMouseLeave={resetTilt}>
                     <div className="pcp-image">
-                      <span className="pcp-letter" style={{ color: p.color }}>{p.name[0]}</span>
+                      <span className="pcp-letter" aria-hidden="true">{p.name[0]}</span>
+                      <span className="pcp-word" aria-hidden="true">{p.name}</span>
                       <div className="pcp-overlay">
                         {p.cs ? (
                           <a className="btn btn-gold" href={`/case-studies/${p.cs}`} onClick={e => { e.preventDefault(); goTo(`case-${p.cs}`); }}>Case Study <span>→</span></a>
@@ -754,7 +759,7 @@ export default function App() {
           <div className="container quick-cta-inner">
             <div className="quick-cta-copy">
               <h2>Ready to move from <span>"doing okay"</span> to doing exceptional?</h2>
-              <p>We've shown you our methodology and real client outcomes. Within 24 hours of your message, you'll get an exact roadmap — scope, timeline, dependencies, and price breakdown. No vague promises, just a plan to execute.</p>
+              <p>We've shown you our methodology and real client outcomes. Within 24 hours of your message, you'll get an exact roadmap: scope, timeline, dependencies, and price breakdown. No vague promises, just a plan to execute.</p>
             </div>
             <div className="quick-cta-actions">
               <a className="btn btn-gold btn-glow" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Get Free Proposal <span>→</span></a>
@@ -928,11 +933,11 @@ export default function App() {
                   
                   <div className="fc-quote">
                     <span className="fc-quote-mark">"</span>
-                    <p>I believe businesses deserve premium creative and marketing support — not only established brands. But I'm also daily learning from standout international companies like Apple, Tesla, Amex and their website/proposals how confidence closes without pressure. AEMTECH makes that aspiration accessible without compromising craft.</p>
+                    <p>Every business deserves premium creative, not just the big brands. My job is to give you that level of craft with none of the agency runaround.</p>
                   </div>
 
                   <div className="fc-story">
-                    <p>AEMTECH started as AEMTECH Institute, teaching digital skills. It taught me how often investors fund agencies that promise generic beauty and deliver nothing meaningful. My expertise doesn't cover everything. Every week I test interface render techniques from Apple, Tesla, Amex and yes I still make mistakes. Those mistakes plus yours become entry-points to collaborate so projects never become excuses involving junior interns, time-permitting templates, or masked subcontract.</p>
+                    <p>AEMTECH started as an institute teaching digital skills. That taught me what most agencies get wrong: pretty work with no thinking behind it. So I built the opposite. No juniors, no templates, no handoffs.</p>
                     <p>I personally lead every project from initial brief to final delivery. Nothing else.</p>
                   </div>
 
@@ -960,8 +965,8 @@ export default function App() {
 
                   {/* Social Proof */}
                   <div className="fc-proof">
-                    <div className="fcp-stars">★★★★★ <span>5.0 Rating</span></div>
                     <div className="fcp-clients">10+ Projects Delivered</div>
+                    <div className="fcp-clients">Direct Founder Access</div>
                   </div>
                 </div>
               </R>
@@ -993,7 +998,7 @@ export default function App() {
             </R>
             <R>
               <div className="faq-cta-note">
-                <span>Still unsure?</span> Skip the scrolling — <a href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>ask us directly</a> or <a href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp us</a> for a fast answer.
+                <span>Still unsure?</span> Skip the scrolling, <a href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>ask us directly</a> or <a href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp us</a> for a fast answer.
               </div>
             </R>
           </div>
@@ -1073,6 +1078,13 @@ export default function App() {
                       <div className="cs-card-body">
                         <small>Location</small>
                         <strong>Karachi, Pakistan</strong>
+                      </div>
+                    </div>
+                    <div className="cs-card">
+                      <div className="cs-card-icon"><Icon name="💳" size={20} /></div>
+                      <div className="cs-card-body">
+                        <small>Pricing</small>
+                        <strong>Custom quotes, 50% upfront</strong>
                       </div>
                     </div>
                   </div>

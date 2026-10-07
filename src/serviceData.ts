@@ -28,7 +28,7 @@ export const allServices = [
     title: 'Logo Design',
     short: 'Strong brand identity that customers remember and trust instantly.',
     hero: 'A forgettable or confusing logo costs you credibility from day one. We build brand systems customers remember.',
-    desc: 'An unclear or generic logo damages perception before people even try your product. Customers remember brands through visuals, color palette, and tone — all working together. We research your audience, competitors, and positioning first, then create identity systems that communicate quality, specialization, and confidence across packaging, digital screens, and print materials.',
+    desc: 'An unclear or generic logo damages perception before people even try your product. Customers remember brands through visuals, color palette, and tone, all working together. We research your audience, competitors, and positioning first, then create identity systems that communicate quality, specialization, and confidence across packaging, digital screens, and print materials.',
     features: ['3 unique logo concepts', 'Unlimited revisions until perfect', 'Full color + B&W versions', 'All file formats (AI, SVG, PNG, PDF)', 'Brand mark + wordmark variations', 'Social media profile versions', 'Favicon & app icon versions', 'Brand color palette included', 'Typography recommendations', 'Logo usage guidelines'],
     results: ['100% custom designs', '48hr first concepts', 'Lifetime ownership'],
     howItWorks: [
@@ -66,7 +66,7 @@ export const allServices = [
     title: 'Graphic Design',
     short: 'Compelling visuals that make your message unforgettable.',
     hero: 'Blended into feed, your competitors become interchangeable. Strong graphics help you stand out and stay remembered.',
-    desc: 'Essential design language drives sales. Every post, brochure, presentation, and campaign should match your personality, voice, and values. Inconsistent design is affordable confusion. We create brand-consistent graphics that work across platforms, engage audiences, and communicate your competitive edge — each element designed to shift perception and encourage action.',
+    desc: 'Essential design language drives sales. Every post, brochure, presentation, and campaign should match your personality, voice, and values. Inconsistent design is affordable confusion. We create brand-consistent graphics that work across platforms, engage audiences, and communicate your competitive edge, each element designed to shift perception and encourage action.',
     features: ['Social media post designs', 'Story & reel templates', 'Banner & cover designs', 'Flyer & brochure design', 'Poster & signage', 'Business cards & stationery', 'Presentation design', 'Infographics', 'Email headers', 'Ad creatives (Meta, Google)'],
     results: ['24-48hr turnaround', 'Unlimited revisions', 'Source files included'],
     howItWorks: [
@@ -102,7 +102,7 @@ export const allServices = [
     title: 'Shopify Development',
     short: 'E-commerce storefronts that convert visitors into paying customers.',
     hero: 'Generic Shopify themes cost you revenue. Custom storefronts that match your brand and buying journey convert better.',
-    desc: 'Cheap templates are shopping carts charming people buying every competitor uniformly. Your customers recognize when a store genuinely reflects you versus a theme merged with inside pages. We build custom Shopify architectures around your brand story, product collection, and customer psychology — faster loading, easier navigation, segmented ordering information, and checkout friction reduced. Each component exists to increase purchase completion.',
+    desc: 'Cheap templates are shopping carts charming people buying every competitor uniformly. Your customers recognize when a store genuinely reflects you versus a theme merged with inside pages. We build custom Shopify architectures around your brand story, product collection, and customer psychology: faster loading, easier navigation, segmented ordering information, and checkout friction reduced. Each component exists to increase purchase completion.',
     features: ['Custom Liquid theme development', 'Product page optimization', 'Cart & checkout conversion flow', 'Mobile-first responsive design', 'Speed & performance tuning', 'App integrations (Klaviyo, Recharge, etc)', 'Inventory & collection setup', 'Launch support & QA testing'],
     results: ['+120% avg sales growth', '2.8s avg load time', '95+ mobile speed score'],
     howItWorks: [
@@ -138,7 +138,7 @@ export const allServices = [
     title: 'Website Development',
     short: 'Bespoke digital headquarters that establish expertise, simplify discovery, and turn ambush prey hunting ambushers away.',
     hero: 'Outdated portfolio list type pages lose high-value employees. Distinctive modular digital experiences instantly establish position.',
-    desc: 'Consumers erase near-instantly when info hunting too much scrolling, intelektul poor visual hierarchy, broken mobile fitting, or anonymous template identity issue. Your value statement gets lost. With thorough competitor and customer mapping, we build complete website framework that communicates leadership style properly. Focus sits on showing what accurate capability means for visitor logistics — booking flow simpler, next-step direction obvious, trust levers visible immediately. Keep clients engaged instead of browsing around corner to leave.',
+    desc: 'Consumers erase near-instantly when info hunting too much scrolling, intelektul poor visual hierarchy, broken mobile fitting, or anonymous template identity issue. Your value statement gets lost. With thorough competitor and customer mapping, we build complete website framework that communicates leadership style properly. Focus sits on showing what accurate capability means for visitor logistics: booking flow simpler, next-step direction obvious, trust levers visible immediately. Keep clients engaged instead of browsing around corner to leave.',
     features: ['Corporate & business websites', 'Landing pages & funnels', 'Portfolio & personal brand sites', 'SaaS & product websites', 'Real estate & listing sites', 'Restaurant & hospitality sites', 'Educational & course platforms', 'Non-profit & community sites', 'Multi-page custom builds', 'CMS integration (WordPress, headless)'],
     results: ['Sub-2s load time', 'Mobile-first responsive', '100% custom coded'],
     howItWorks: [
@@ -238,7 +238,7 @@ export const allServices = [
     title: 'Brand Identity',
     short: 'Complete brand systems that show unique thinking and reliably generate customer confidence.',
     hero: 'Disconnected logos create mixed messages. Unified brand systems that look consistent and purposeful stand out immediately.',
-    desc: 'Cheap DIY tools produce random visuals customers interpret as unserious. Your story, values, voice character, colors, and aesthetic patterns form a cohesive identity people intuitively recognize. We figure out who you are, what makes you distinct, then bake everything — packaging, letterhead, admin email signature, service delivery email, social bios — into a system that looks intentionally engineered, not randomly assembled.',
+    desc: 'Cheap DIY tools produce random visuals customers interpret as unserious. Your story, values, voice character, colors, and aesthetic patterns form a cohesive identity people intuitively recognize. We figure out who you are, what makes you distinct, then bake everything: packaging, letterhead, admin email signature, service delivery email, and social bios into a system that looks intentionally engineered, not randomly assembled.',
     features: ['Logo design (3 concepts + refinement)', 'Color palette & typography system', 'Brand guidelines document', 'Social media template kit', 'Business card & stationery design', 'Presentation template', 'Brand voice & messaging direction', 'Icon & illustration style'],
     results: ['Complete brand system', 'Print & digital ready', 'Scalable identity'],
     howItWorks: [
@@ -271,7 +271,7 @@ export const allServices = [
     title: 'SEO',
     short: 'Technically sound website platforms that search engines discover, rank, and recommend.',
     hero: 'Invisible online means customers only find competitors. Strategic SEO targets buyers actively searching, not randos accidentally landing.',
-    desc: 'Pretty websites mean nothing if potential customers cannot find them when it matters. Slow technical bugs, generic copy, unclear VA page titles stop Google from understanding expertise. We do targeted keyword research based on search intent, technical verification, content architecture, and measurement frameworks — focused on commercial-search queries that bring progresfully customers. Paid ads stop when ad money stops, structured organic traffic sustainability keeps growing long term.',
+    desc: 'Pretty websites mean nothing if potential customers cannot find them when it matters. Slow technical bugs, generic copy, unclear VA page titles stop Google from understanding expertise. We do targeted keyword research based on search intent, technical verification, content architecture, and measurement frameworks, focused on commercial-search queries that bring progresfully customers. Paid ads stop when ad money stops, structured organic traffic sustainability keeps growing long term.',
     features: ['Technical SEO audit & fixes', 'On-page optimization', 'Schema markup (JSON-LD)', 'Page speed optimization', 'Content strategy & keyword research', 'Internal linking structure', 'Google Search Console setup', 'Monthly ranking reports'],
     results: ['+180% organic traffic avg', 'Top 10 rankings', 'Structured data rich results'],
     howItWorks: [
@@ -303,7 +303,7 @@ export const allServices = [
     title: 'Digital Marketing',
     short: 'Customer acquisition strategy combining creative content, psychology-driven campaigns, and measurable results.',
     hero: 'Random content sharing wastes time but strategic campaigns reach buyers actively looking to solve their problem.',
-    desc: 'Posting daily without alignment sends potential customers confused signals about what you offer. Thoughtful marketing channels — targeted paid ads, coordinated content feeds, limited-period promos, email nurture — lead customers through logical conversion journey. We create unique campaign narratives that show why specific problem, solution, result matters. Measure everything so investment shows tangible business uplift, not vanity likes.',
+    desc: 'Posting daily without alignment sends potential customers confused signals about what you offer. Thoughtful marketing channels: targeted paid ads, coordinated content feeds, limited-period promos, email nurture, lead customers through logical conversion journey. We create unique campaign narratives that show why specific problem, solution, result matters. Measure everything so investment shows tangible business uplift, not vanity likes.',
     features: ['Social media management', 'Content creation & calendar', 'Campaign strategy & execution', 'Meta & Google ad management', 'Email marketing (Klaviyo)', 'Analytics & performance reporting', 'Audience growth strategy', 'Influencer outreach coordination'],
     results: ['+200% engagement avg', 'Qualified lead generation', 'Full-funnel strategy'],
     howItWorks: [
@@ -335,7 +335,7 @@ export const allServices = [
     title: 'Social Media Management',
     short: 'Long-term social authority and active communities that convert followers into qualified leads and repeat customers.',
     hero: 'Abandoned or mismatched social accounts look neglected. Consistent strategic content grows engagement, trust, and revenue.',
-    desc: 'Posting a branded quote once a week is marketing? Does not add business. Competitive differences show actively conversational brands — unique voice, distinctive look-and-feel, authentic thoughts on trends, helpful replies, regular interaction, tailored offerings. Our campaigns match unique customer clusters rather than generic broadcast. Each comment response counts as trust building toward sale. Manual moderation and analytics identify reliable patterns to grow without buying fake followers.',
+    desc: 'Posting a branded quote once a week is marketing? Does not add business. Competitive differences show actively conversational brands: unique voice, distinctive look-and-feel, authentic thoughts on trends, helpful replies, regular interaction, tailored offerings. Our campaigns match unique customer clusters rather than generic broadcast. Each comment response counts as trust building toward sale. Manual moderation and analytics identify reliable patterns to grow without buying fake followers.',
     features: ['Instagram management & growth', 'Facebook page management', 'LinkedIn content strategy', 'TikTok content direction', 'Content calendar planning', 'Graphic design for posts', 'Caption & hashtag strategy', 'Community management & replies', 'Monthly analytics reporting', 'Reel & story creation'],
     results: ['+200% engagement avg', 'Consistent brand voice', 'Full platform management'],
     howItWorks: [
