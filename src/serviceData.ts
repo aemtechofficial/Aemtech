@@ -50,14 +50,10 @@ export const allServices = [
       { q: 'How long does logo design take?', a: 'First concepts in 48-72 hours. Full project typically 5-7 days including revisions.' },
     ],
     portfolio: [
-      { name: 'NexGen Gaming', category: 'Gaming & Esports', desc: 'Bold esports team logo with dynamic typography', stat: 'Gaming' },
-      { name: 'Vertex Finance', category: 'Business & Corporate', desc: 'Minimalist mark for fintech startup', stat: 'Corporate' },
-      { name: 'Spice Route', category: 'Food & Restaurant', desc: 'Elegant emblem for premium restaurant', stat: 'Restaurant' },
-      { name: 'Luxe Attire', category: 'Fashion & Beauty', desc: 'Sophisticated wordmark for fashion brand', stat: 'Fashion' },
-      { name: 'CodeStack', category: 'Tech & Startup', desc: 'Modern tech logo with clever symbol', stat: 'Tech' },
-      { name: 'Iron Athletics', category: 'Sports & Fitness', desc: 'Powerful emblem for fitness brand', stat: 'Sports' },
-      { name: 'Crown Properties', category: 'Real Estate', desc: 'Premium mark for luxury real estate', stat: 'Real Estate' },
-      { name: 'MindCare', category: 'Healthcare', desc: 'Warm, trustworthy healthcare logo', stat: 'Healthcare' },
+      { name: 'B.Y.H World', category: 'Brand Identity', desc: 'Luxury black and gold logo for a furniture and interiors brand' },
+      { name: 'M.S Enterprise', category: 'Brand Identity', desc: 'Minimal navy and cyan monogram logo' },
+      { name: 'S.R Global', category: 'Brand Identity', desc: 'Gold luxury monogram with tagline' },
+      { name: 'MS Stationery', category: 'Brand Identity', desc: 'Illustrative badge logo with full brand system' },
     ],
   },
   {
@@ -88,12 +84,8 @@ export const allServices = [
       { q: 'Do you offer packages for ongoing work?', a: 'Yes! Monthly retainer packages available for consistent content needs.' },
     ],
     portfolio: [
-      { name: 'Flavor Fest Campaign', category: 'Social Media Graphics', desc: 'Complete Instagram campaign for food festival', stat: 'Social Media' },
-      { name: 'TechCon 2024', category: 'Event Materials', desc: 'Banners, badges, and signage for tech conference', stat: 'Event' },
-      { name: 'Bloom Cosmetics', category: 'Product Launch', desc: 'Social media kit for beauty product launch', stat: 'Beauty' },
-      { name: 'Urban Eats Menu', category: 'Menu Design', desc: 'Premium restaurant menu and table cards', stat: 'Restaurant' },
-      { name: 'StartupPK Pitch', category: 'Presentation Design', desc: 'Investor pitch deck for startup', stat: 'Presentation' },
-      { name: 'FitLife Gym', category: 'Marketing Materials', desc: 'Flyers, posters, and social graphics', stat: 'Fitness' },
+      { name: 'B.Y.H World', category: 'Print Design', desc: 'Tri-fold brochure, business cards, letterhead and envelope' },
+      { name: 'MS Stationery', category: 'Brand Assets', desc: 'Complete stationery brand asset kit' },
     ],
   },
   {
@@ -124,11 +116,8 @@ export const allServices = [
       { q: 'How long does a Shopify store take?', a: 'Typically 3-6 weeks depending on complexity, number of products, and custom features needed.' },
     ],
     portfolio: [
-      { name: 'PureGlow', category: 'Skincare & Beauty', desc: 'Skincare brand with quiz-based product recommendations', stat: '+85% CVR' },
-      { name: 'FitFuel', category: 'Health & Supplements', desc: 'Subscription-based supplement store with recurring orders', stat: '+200% Revenue' },
-      { name: 'Luxe Jewelry', category: 'Jewelry & Accessories', desc: 'High-end jewelry store with 360° product views', stat: '+150% AOV' },
-      { name: 'Home Harmony', category: 'Home & Living', desc: 'Furniture store with room visualization feature', stat: '+90% Traffic' },
-      { name: 'TechGear Pro', category: 'Electronics', desc: 'Electronics store with comparison tools', stat: '+75% Sales' },
+      { name: 'Glam Shlam', category: 'Fashion Ecommerce', desc: 'Custom Shopify store for a fashion brand' },
+      { name: 'EL Hombre', category: 'Perfume Ecommerce', desc: 'Custom Shopify store for a perfume brand' },
     ],
   },
   {
@@ -158,12 +147,9 @@ export const allServices = [
       { q: 'Do you build WordPress sites?', a: 'Yes, but only custom themes. We never use pre-made templates or Elementor.' },
     ],
     portfolio: [
-      { name: 'TechNova', category: 'Corporate Website', desc: 'Modern IT solutions company website with case studies', stat: '+64% Leads' },
-      { name: 'Decorify', category: 'Portfolio Website', desc: 'Interior design portfolio with gallery and booking', stat: '+90% Traffic' },
-      { name: 'MindSpace', category: 'SaaS Website', desc: 'Productivity app landing page with animations', stat: '+45% Signups' },
-      { name: 'Elite Properties', category: 'Real Estate', desc: 'Property listing site with advanced filters', stat: '+80% Inquiries' },
-      { name: 'Flavor House', category: 'Restaurant', desc: 'Restaurant website with online reservation', stat: '+120% Bookings' },
-      { name: 'LearnPro Academy', category: 'Education', desc: 'Online course platform with student dashboard', stat: '+200% Enrollments' },
+      { name: 'ZABS International', category: 'Business Website', desc: 'React and Vite website for a Houston textile recycling company', stat: '90+ Lighthouse' },
+      { name: 'US Global Star Trading', category: 'Fintech Website', desc: 'Trading platform website with live market data' },
+      { name: 'AEMTECH Website', category: 'Agency Website', desc: 'Our own digital flagship', stat: '#1 Google Rank' },
     ],
   },
   {
@@ -193,9 +179,8 @@ export const allServices = [
       { q: 'Do you provide theme documentation?', a: 'Yes. Complete documentation with screenshots, section guides, and best practices.' },
     ],
     portfolio: [
-      { name: 'Artisan Goods', category: 'Handmade Products', desc: 'Custom theme for artisan marketplace', stat: 'Custom Theme' },
-      { name: 'Sport Elite', category: 'Sports Equipment', desc: 'High-performance theme with mega menu', stat: 'Custom Theme' },
-      { name: 'Organic Life', category: 'Organic Products', desc: 'Clean, minimal theme for health brand', stat: 'Custom Theme' },
+      { name: 'Glam Shlam', category: 'Custom Theme', desc: 'Custom Liquid theme for fashion ecommerce' },
+      { name: 'EL Hombre', category: 'Custom Theme', desc: 'Custom Liquid theme for a perfume brand' },
     ],
   },
   {
@@ -225,10 +210,9 @@ export const allServices = [
       { q: 'Can you redesign my existing website?', a: 'Yes. We can audit your current design and create a completely new visual direction.' },
     ],
     portfolio: [
-      { name: 'FinTrack App', category: 'Mobile App Design', desc: 'Finance tracking app with dark mode UI', stat: 'App Design' },
-      { name: 'CloudSync Dashboard', category: 'SaaS Dashboard', desc: 'Analytics dashboard with data visualization', stat: 'Dashboard' },
-      { name: 'ShopEase Mobile', category: 'E-commerce App', desc: 'Mobile shopping experience redesign', stat: 'E-commerce' },
-      { name: 'WorkFlow Pro', category: 'Web App Design', desc: 'Project management tool interface', stat: 'Web App' },
+      { name: 'ZABS International', category: 'Website UI', desc: '15+ custom sections with accessible design' },
+      { name: 'US Global Star Trading', category: 'Dashboard UI', desc: 'Trading dashboard with live charts' },
+      { name: 'AEMTECH Website', category: 'Agency UI', desc: 'Motion-rich premium interface' },
     ],
   },
   {
@@ -258,10 +242,10 @@ export const allServices = [
       { q: 'Can you rebrand my existing business?', a: 'Absolutely. We can evolve your existing identity or create a completely fresh direction.' },
     ],
     portfolio: [
-      { name: 'Nova Ventures', category: 'Full Rebrand', desc: 'Complete brand identity for investment firm', stat: 'Rebrand' },
-      { name: 'Bloom Beauty', category: 'Beauty Brand', desc: 'Feminine, elegant brand for cosmetics line', stat: 'New Brand' },
-      { name: 'Urban Bites', category: 'Restaurant Brand', desc: 'Bold, modern identity for fast-casual chain', stat: 'F&B Brand' },
-      { name: 'TechPulse', category: 'Tech Startup', desc: 'Dynamic brand for AI startup', stat: 'Tech Brand' },
+      { name: 'B.Y.H World', category: 'Brand Identity', desc: 'Complete luxury identity: logo, cards, brochure, letterhead, envelope' },
+      { name: 'M.S Enterprise', category: 'Brand Identity', desc: 'Minimal navy and cyan identity with letterhead' },
+      { name: 'S.R Global', category: 'Brand Identity', desc: 'Gold luxury identity with tagline and letterhead' },
+      { name: 'MS Stationery', category: 'Brand Identity', desc: 'Full brand system from sketch to final logo' },
     ],
   },
   {
@@ -291,9 +275,8 @@ export const allServices = [
       { q: 'Do you handle content writing?', a: 'Yes. We can create SEO-optimized content, blog posts, and landing page copy.' },
     ],
     portfolio: [
-      { name: 'LegalPro Firm', category: 'Local SEO', desc: 'Law firm ranking #1 for city keywords', stat: '+180% Traffic' },
-      { name: 'Organic Store', category: 'E-commerce SEO', desc: 'Health store with 50+ ranking keywords', stat: '+220% Organic' },
-      { name: 'TechBlog', category: 'Content SEO', desc: 'Tech blog with 100K+ monthly visitors', stat: '+300% Visitors' },
+      { name: 'AEMTECH Website', category: 'Technical SEO', desc: 'Full technical SEO with sitemap and schema', stat: '#1 Google Rank' },
+      { name: 'ZABS International', category: 'Technical SEO', desc: 'SEO with schema markup and accessibility', stat: '90+ Lighthouse' },
     ],
   },
   {
@@ -322,11 +305,6 @@ export const allServices = [
       { q: 'Do you create the content?', a: 'Yes. Our team handles graphic design, copywriting, video editing, and scheduling.' },
       { q: 'What\'s your minimum engagement period?', a: 'We recommend a minimum of 3 months to see meaningful results from marketing.' },
     ],
-    portfolio: [
-      { name: 'FashionHub', category: 'Meta Ads', desc: 'Fashion brand with 5x ROAS on ads', stat: '+400% ROAS' },
-      { name: 'Fitness First', category: 'Lead Generation', desc: 'Gym chain lead gen campaign', stat: '+150% Leads' },
-      { name: 'EduStart', category: 'Content Marketing', desc: 'EdTech content strategy', stat: '+200% Signups' },
-    ],
   },
   {
     slug: 'social-media-management',
@@ -353,11 +331,6 @@ export const allServices = [
       { q: 'How many posts per week?', a: 'Depends on the package. Typically 3-5 posts per week plus stories and engagement.' },
       { q: 'Do you handle DMs and comments?', a: 'Yes. Community management can include replies to comments and direct messages on your behalf.' },
       { q: 'Can I approve content before posting?', a: 'Absolutely. We share a content calendar for your approval before anything goes live.' },
-    ],
-    portfolio: [
-      { name: 'Cafe Delights', category: 'Instagram Growth', desc: 'Cafe grew from 2K to 25K followers', stat: '+1150% Followers' },
-      { name: 'Fashion Nova PK', category: 'Full Management', desc: 'Fashion brand daily content management', stat: '+300% Engagement' },
-      { name: 'Tech Reviews', category: 'YouTube Channel', desc: 'Tech channel with consistent uploads', stat: '+50K Subs' },
     ],
   },
   {
@@ -387,9 +360,8 @@ export const allServices = [
       { q: 'Do you optimize Shopify stores?', a: 'Yes. Shopify speed optimization can cover images, apps, scripts, and Liquid code.' },
     ],
     portfolio: [
-      { name: 'SlowStore Fix', category: 'Shopify Speed', desc: 'Shopify store from 6s to 1.8s load time', stat: '70% Faster' },
-      { name: 'WordPress Rescue', category: 'WordPress Speed', desc: 'Blog from 8s to 2s with caching', stat: '75% Faster' },
-      { name: 'React App Boost', category: 'Web App Speed', desc: 'SaaS app bundle size reduced 60%', stat: '60% Smaller' },
+      { name: 'ZABS International', category: 'Performance', desc: 'Optimized React build with fast load times', stat: '90+ Lighthouse' },
+      { name: 'AEMTECH Website', category: 'Performance', desc: 'Lightweight single-file production build' },
     ],
   },
   {
@@ -417,11 +389,6 @@ export const allServices = [
       { q: 'What does maintenance include?', a: 'Updates, security patches, bug fixes, content changes, speed checks, and monthly reports.' },
       { q: 'How quickly do you respond to issues?', a: 'Urgent issues within 2-4 hours. Regular requests within 24 hours.' },
       { q: 'Can I cancel the maintenance plan?', a: 'Yes. No long-term lock-in. Cancel anytime with 30 days notice.' },
-    ],
-    portfolio: [
-      { name: 'E-commerce Store', category: 'Ongoing Support', desc: '2+ years of continuous maintenance', stat: '99.9% Uptime' },
-      { name: 'Corporate Site', category: 'Security + Updates', desc: 'Monthly security patches and backups', stat: '0 Incidents' },
-      { name: 'SaaS Platform', category: 'Performance', desc: 'Continuous optimization and monitoring', stat: '24/7 Support' },
     ],
   },
 ].sort((a, b) => servicePriority.indexOf(a.slug) - servicePriority.indexOf(b.slug));
