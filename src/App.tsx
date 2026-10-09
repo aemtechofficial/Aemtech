@@ -715,10 +715,10 @@ export default function App() {
             {/* SECONDARY WORK */}
             <div className="portfolio-grid-premium">
               {[
+                { cat: 'Brand Identity', name: 'B.Y.H World', sub: 'Furniture & Interiors, Karachi', stat: '16', statLabel: 'Brand Assets', color: '#c9a227', cs: 'byh-world' },
                 { cat: 'Brand Identity', name: 'MS Stationery', sub: 'Stationery & Office Supplies', stat: '4', statLabel: 'Creative Stages', color: '#f5c542', cs: 'ms-stationery' },
-                { cat: 'Ecommerce', name: 'Glamouria', sub: 'Fashion & Apparel', stat: '+120%', statLabel: 'Sales Growth', color: '#6b8afd', cs: 'glamouria' },
-                { cat: 'Brand + Digital', name: 'PureGlow', sub: 'Skincare', stat: '360°', statLabel: 'Brand System', color: '#a78bfa', cs: '' },
-                { cat: 'Marketing System', name: 'FitFuel', sub: 'Fitness Supplements', stat: 'Full', statLabel: 'Growth Funnel', color: '#ff6b9d', cs: '' },
+                { cat: 'Website', name: 'US Global Star Trading', sub: 'Fintech, USA', stat: '5', statLabel: 'Asset Classes', color: '#c9a227', cs: 'us-global-star-trading' },
+                { cat: 'Brand Identity', name: 'S.R Global', sub: 'Furniture, Karachi', stat: '3', statLabel: 'Brand Assets', color: '#c9a227', cs: 'sr-global' },
               ].map((p, i) => (
                 <R key={i}>
                   <article className="portfolio-card-premium" style={{ '--pc': p.color } as React.CSSProperties} onMouseMove={handleTilt} onMouseLeave={resetTilt}>

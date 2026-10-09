@@ -124,7 +124,6 @@ export const allServices = [
       { q: 'How long does a Shopify store take?', a: 'Typically 3-6 weeks depending on complexity, number of products, and custom features needed.' },
     ],
     portfolio: [
-      { name: 'Glamouria', category: 'Fashion & Apparel', desc: 'Premium fashion store with lookbook and quick-buy features', stat: '+120% Sales' },
       { name: 'PureGlow', category: 'Skincare & Beauty', desc: 'Skincare brand with quiz-based product recommendations', stat: '+85% CVR' },
       { name: 'FitFuel', category: 'Health & Supplements', desc: 'Subscription-based supplement store with recurring orders', stat: '+200% Revenue' },
       { name: 'Luxe Jewelry', category: 'Jewelry & Accessories', desc: 'High-end jewelry store with 360° product views', stat: '+150% AOV' },
