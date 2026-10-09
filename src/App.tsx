@@ -629,15 +629,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* ═══ CLIENT MARQUEE ═══ */}
-        <section className="trusted section-tight">
-          <div className="container"><p className="section-kicker">Brands we've built for</p></div>
-          <div className="marquee marquee-clients">
-            <div className="marquee-track">
-              {['ZABS International','US Global Star Trading','B.Y.H World','M.S Enterprise','S.R Global','MS Stationery','Glam Shlam','EL Hombre','ZABS International','US Global Star Trading','B.Y.H World','M.S Enterprise','S.R Global','MS Stationery','Glam Shlam','EL Hombre'].map((b, i) => <span key={i}>{b}</span>)}
-            </div>
-          </div>
-        </section>
 
         {/* ═══ TRUST STRIP 1 ═══ */}
         <div className="trust-strip">
@@ -715,6 +706,16 @@ export default function App() {
         </section>
 
         {/* ═══ PORTFOLIO ═══ */}
+        {/* ═══ CLIENT MARQUEE ═══ */}
+        <section className="trusted section-tight">
+          <div className="container"><p className="section-kicker">Brands we've built for</p></div>
+          <div className="marquee marquee-clients">
+            <div className="marquee-track">
+              {['ZABS International','US Global Star Trading','B.Y.H World','M.S Enterprise','S.R Global','MS Stationery','Glam Shlam','EL Hombre','ZABS International','US Global Star Trading','B.Y.H World','M.S Enterprise','S.R Global','MS Stationery','Glam Shlam','EL Hombre'].map((b, i) => <span key={i}>{b}</span>)}
+            </div>
+          </div>
+        </section>
+
         <section className="portfolio-section section-pad" id="portfolio">
           <div className="container">
             <R className="center-head">
