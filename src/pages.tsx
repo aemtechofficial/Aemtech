@@ -968,7 +968,7 @@ export function CaseStudyPage({ goTo, slug }: PageProps & { slug: string }) {
   if (!cs) return (<main><PageHero goTo={goTo} eyebrow="Not Found" title={<>Case study not <span>found.</span></>} desc="" /><section className="section-pad"><div className="container" style={{ textAlign: 'center' }}><button className="btn btn-gold" onClick={() => goTo('portfolio')}>View Portfolio <span>→</span></button></div></section></main>);
   const nx = cs.nextProject ? allCaseStudies.find(s => s.slug === cs.nextProject) : null;
   const isZabs = cs.slug === 'zabs-international';
-  const techStack = isZabs ? ['React', 'Vite', 'Tailwind CSS v4', 'Web3Forms', 'Poppins', 'Netlify'] : cs.slug === 'ms-stationery' ? ['Shopify', 'Liquid', 'Figma', 'Custom Theme', 'SEO', 'WhatsApp API'] : cs.slug === 'glamouria' ? ['Shopify', 'Liquid', 'Figma', 'Klaviyo', 'Speed Opt.'] : cs.slug === 'us-global-star-trading' ? ['React', 'Vite', 'Tailwind CSS', 'Charts', 'SEO'] : cs.slug === 'aemtech-website' ? ['React 19', 'Vite 7', 'Tailwind CSS v4', 'SEO', 'Schema.org'] : ['Figma', 'Brand Identity', 'Print Design'];
+  const techStack = isZabs ? ['React', 'Vite', 'Tailwind CSS v4', 'Web3Forms', 'Poppins', 'Netlify'] : cs.slug === 'ms-stationery' ? ['Shopify', 'Liquid', 'Figma', 'Custom Theme', 'SEO', 'WhatsApp API'] : cs.slug === 'us-global-star-trading' ? ['React', 'Vite', 'Tailwind CSS', 'Charts', 'SEO'] : cs.slug === 'aemtech-website' ? ['React 19', 'Vite 7', 'Tailwind CSS v4', 'SEO', 'Schema.org'] : ['Figma', 'Brand Identity', 'Print Design'];
 
   return (<main>
     {/* ═══ CINEMATIC HERO ═══ */}
