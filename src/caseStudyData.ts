@@ -75,11 +75,6 @@ export const allCaseStudies: CaseStudy[] = [
       { step: '05', title: 'Content & SEO', desc: 'Wrote product descriptions, set up collection hierarchy, implemented schema markup, and optimized all images for speed.' },
       { step: '06', title: 'Launch & Growth', desc: 'Launched with a social media campaign, set up Google Analytics, and provided 30-day post-launch optimization and support.' },
     ],
-    testimonial: {
-      text: 'AEMTECH completely transformed our business. The logo, brand system, and online store gave our local shop a much more premium digital presence.',
-      name: 'Muhammad S.',
-      role: 'Owner, MS Stationery',
-    },
     brandIdentity: {
       logo: 'MS',
       logoImage: '/images/portfolio/ms-stationery/logo-badge.png',
@@ -166,11 +161,6 @@ export const allCaseStudies: CaseStudy[] = [
       { step: '04', title: 'SEO & Optimization', desc: 'Completed the technical SEO setup with metadata, social cards, and structured data for Organization, LocalBusiness, FAQ, and WebSite. We also added non-blocking fonts, accessibility features, reduced-motion support, and Netlify deployment.' },
       { step: '05', title: 'Delivery & Approval', desc: 'The live demo was delivered in person and approved during the first presentation. The contact form and polished success experience were highlights for the client.' },
     ],
-    testimonial: {
-      text: 'The website exceeded our expectations. The design is premium, the animations are smooth, and the contact form with popup was the highlight. Truly professional work.',
-      name: 'ZABS International',
-      role: 'Houston, Texas, USA',
-    },
     features: [
       'Fully custom React + Vite build',
       '15+ premium animated sections',

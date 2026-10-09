@@ -105,7 +105,6 @@ export default function App() {
   const [page, setPage] = useState(getPageFromLocation);
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [testimonialIdx, setTestimonialIdx] = useState(0);
   const [activeFaq, setActiveFaq] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -337,13 +336,6 @@ export default function App() {
     window.addEventListener('formSubmitted', fn);
     return () => window.removeEventListener('formSubmitted', fn);
   }, []);
-
-  // Testimonial auto
-  const testimonials = [
-    { stars: '★★★★★', text: '"It was a Friday night demo. Instead of explaining slides, Fawaz opened the live contact form and sent a test email, it arrived instantly in my inbox with a branded success overlay. That polished transition convinced me to approve immediately."', ini: 'ZI', name: 'ZABS International', role: 'Houston Recycle Exporter (First Demo)' },
-    { stars: '★★★★★', text: '"Delivered two days ahead of schedule. The Shopify experience wasn\'t just colorful decoration, the packaging inquiry button, bulk flow, and responsive text placement all came from real UX thinking."', ini: 'MS', name: 'MS Stationery', role: 'Branding + Ecommerce' },
-  ];
-  useEffect(() => { const t = setInterval(() => setTestimonialIdx(i => (i + 1) % testimonials.length), 5200); return () => clearInterval(t); }, []);
 
   // Parallax
   useEffect(() => {
@@ -858,7 +850,7 @@ export default function App() {
 
         {/* Packages removed. Pricing is specific to each service page. */}
 
-        {/* ═══ STATS + TESTIMONIALS ═══ */}
+        {/* ═══ STATS ═══ */}
         <section className="social-proof section-pad">
           <div className="container">
             {/* Stats Row */}
@@ -885,48 +877,8 @@ export default function App() {
                 </div>
               </div>
             </R>
-
-            {/* Testimonials */}
-            <R className="testimonials-section">
-              <div className="testimonials-header">
-                <div>
-                  <p className="eyebrow">Client Reviews</p>
-                  <h2>How Clients Actually Describe Working With Us</h2>
-                </div>
-                <div className="testimonial-controls">
-                  <button onClick={() => setTestimonialIdx(i => (i - 1 + testimonials.length) % testimonials.length)} aria-label="Previous testimonial">←</button>
-                  <span>{testimonialIdx + 1} / {testimonials.length}</span>
-                  <button onClick={() => setTestimonialIdx(i => (i + 1) % testimonials.length)} aria-label="Next testimonial">→</button>
-                </div>
-              </div>
-              <div className="testimonials-slider">
-                {testimonials.map((t, i) => (
-                  <article key={i} className={`testimonial-card${i === testimonialIdx ? ' active' : ''}`}>
-                    <div className="tc-rating">
-                      <span className="tc-stars">{t.stars}</span>
-                      <span className="tc-score">5.0</span>
-                    </div>
-                    <p className="tc-text">{t.text}</p>
-                    <div className="tc-author">
-                      <div className="tc-avatar">{t.ini}</div>
-                      <div className="tc-info">
-                        <strong>{t.name}</strong>
-                        <span>{t.role}</span>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
-              <div className="testimonials-dots">
-                {testimonials.map((_, i) => (
-                  <button key={i} className={i === testimonialIdx ? 'active' : ''} onClick={() => setTestimonialIdx(i)} aria-label={`Show testimonial ${i + 1}`} aria-current={i === testimonialIdx ? 'true' : undefined} />
-                ))}
-              </div>
-            </R>
           </div>
         </section>
-
-        {/* MEET THE FOUNDER: PREMIUM WITH PHOTO */}
         <section className="founder-section" id="team">
           <div className="founder-bg">
             <div className="founder-glow" />
