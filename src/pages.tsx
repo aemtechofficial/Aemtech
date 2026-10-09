@@ -168,12 +168,14 @@ export function ServicesPage({ goTo }: PageProps) {
 export function PortfolioPage({ goTo }: PageProps) {
   const [filter, setFilter] = useState('All');
   const projects = [
-    { cat: 'Website', name: 'ZABS International', sub: 'Textile Recycling, Houston, TX, USA', stat: '90+', statLabel: 'Lighthouse', desc: 'Complete website redesign for a USA-based textile recycling company. The work included 15+ sections, React and Vite development, technical SEO, and accessibility.', color: '#43d17b', caseStudy: 'zabs-international', badge: 'International' },
-    { cat: 'Branding', name: 'MS Stationery', sub: 'Stationery & Office Supplies', stat: '4', statLabel: 'Creative Stages', desc: 'Complete brand strategy, visual identity, logo system, and ecommerce experience for a premium stationery brand.', color: '#f5c542', caseStudy: 'ms-stationery', badge: '' },
-    { cat: 'Ecommerce', name: 'Glamouria', sub: 'Fashion & Apparel', stat: '+120%', statLabel: 'Sales Growth', desc: 'Brand-led ecommerce experience with premium product storytelling, lookbook sections, and optimized mobile checkout.', color: '#6b8afd', caseStudy: 'glamouria', badge: '' },
-    { cat: 'Website', name: 'TechNova', sub: 'IT Solutions', stat: '+64%', statLabel: 'Lead Quality', desc: 'Modern corporate website with service pages, case studies, and lead capture system.', color: '#ff6b9d', caseStudy: '', badge: '' },
-    { cat: 'Branding', name: 'PureGlow', sub: 'Skincare', stat: '+85%', statLabel: 'Conversion', desc: 'A complete identity and brand-led ecommerce experience with guided product discovery.', color: '#a78bfa', caseStudy: '', badge: '' },
-    { cat: 'Growth', name: 'FitFuel', sub: 'Fitness Supplements', stat: '+200%', statLabel: 'Revenue', desc: 'Performance-focused growth system with subscription model and email marketing.', color: '#f97316', caseStudy: '', badge: '' },
+    { cat: 'Website', name: 'ZABS International', sub: 'Textile Recycling, Houston, TX, USA', stat: '90+', statLabel: 'Lighthouse', desc: 'Complete website redesign for a USA-based textile recycling company. The work included 15+ sections, React and Vite development, technical SEO, and accessibility.', color: '#43d17b', caseStudy: 'zabs-international', badge: 'International', image: '/images/portfolio/zabs/shot-01.png' },
+    { cat: 'Website', name: 'US Global Star Trading', sub: 'Fintech Trading Platform, USA', stat: '5', statLabel: 'Asset Classes', desc: 'Full fintech trading platform website with live market ticker, dashboard charts, and investment products across stocks, ETFs, options, and more.', color: '#c9a227', caseStudy: 'us-global-star-trading', badge: 'International', image: '/images/portfolio/usgst/shot-01.png' },
+    { cat: 'Website', name: 'AEMTECH Website', sub: 'Our Own Digital Flagship', stat: '#1', statLabel: 'Google Rank', desc: 'AEMTECH\'s own website. React, Vite, and Tailwind with rich motion design, full case studies, and technical SEO. Ranks number one on Google for "Aemtech".', color: '#f5c542', caseStudy: 'aemtech-website', badge: '', image: '' },
+    { cat: 'Branding', name: 'B.Y.H World', sub: 'Furniture & Interiors, Karachi', stat: '16', statLabel: 'Brand Assets', desc: 'Complete luxury brand identity: logo, business cards, tri-fold brochure, letterheads, and envelope design in black and gold.', color: '#c9a227', caseStudy: 'byh-world', badge: '', image: '/images/portfolio/byh-world/logo-black.png' },
+    { cat: 'Branding', name: 'MS Stationery', sub: 'Stationery & Office Supplies', stat: '4', statLabel: 'Creative Stages', desc: 'Complete brand strategy, visual identity, logo system, and ecommerce experience for a premium stationery brand.', color: '#f5c542', caseStudy: 'ms-stationery', badge: '', image: '/images/portfolio/ms-stationery/logo-badge.png' },
+    { cat: 'Branding', name: 'M.S Enterprise', sub: 'Furniture & Interior, Karachi', stat: '3', statLabel: 'Brand Assets', desc: 'Minimal brand identity with a navy and cyan monogram logo, branded letterhead, and document templates.', color: '#0ea5c9', caseStudy: 'ms-enterprise', badge: '', image: '/images/portfolio/ms-enterprise/logo.png' },
+    { cat: 'Branding', name: 'S.R Global', sub: 'Furniture, Karachi', stat: '3', statLabel: 'Brand Assets', desc: 'Gold luxury identity with an elegant S.R monogram, branded letterhead, and the tagline "Crafting Comfort, Defining Spaces".', color: '#c9a227', caseStudy: 'sr-global', badge: '', image: '/images/portfolio/sr-global/logo.png' },
+    { cat: 'Ecommerce', name: 'Glamouria', sub: 'Fashion & Apparel', stat: '+120%', statLabel: 'Sales Growth', desc: 'Brand-led ecommerce experience with premium product storytelling, lookbook sections, and optimized mobile checkout.', color: '#6b8afd', caseStudy: 'glamouria', badge: '', image: '' },
   ];
   const categories = ['All', ...new Set(projects.map(p => p.cat))];
   const filtered = filter === 'All' ? projects : projects.filter(p => p.cat === filter);
@@ -211,7 +213,11 @@ export function PortfolioPage({ goTo }: PageProps) {
             <R key={p.name + i}>
               <article className="portfolio-card-premium">
                 <div className="pcp-image">
-                  <span className="pcp-letter" style={{ color: p.color }}>{p.name[0]}</span>
+                  {p.image ? (
+                    <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
+                  ) : (
+                    <span className="pcp-letter" style={{ color: p.color }}>{p.name[0]}</span>
+                  )}
                   {p.badge && <div className="pcp-project-badge">{p.badge}</div>}
                   <div className="pcp-overlay">
                     {p.caseStudy ? (
@@ -967,7 +973,7 @@ export function CaseStudyPage({ goTo, slug }: PageProps & { slug: string }) {
   if (!cs) return (<main><PageHero goTo={goTo} eyebrow="Not Found" title={<>Case study not <span>found.</span></>} desc="" /><section className="section-pad"><div className="container" style={{ textAlign: 'center' }}><button className="btn btn-gold" onClick={() => goTo('portfolio')}>View Portfolio <span>→</span></button></div></section></main>);
   const nx = cs.nextProject ? allCaseStudies.find(s => s.slug === cs.nextProject) : null;
   const isZabs = cs.slug === 'zabs-international';
-  const techStack = isZabs ? ['React', 'Vite', 'Tailwind CSS v4', 'Web3Forms', 'Poppins', 'Netlify'] : cs.slug === 'ms-stationery' ? ['Shopify', 'Liquid', 'Figma', 'Custom Theme', 'SEO', 'WhatsApp API'] : cs.slug === 'glamouria' ? ['Shopify', 'Liquid', 'Figma', 'Klaviyo', 'Speed Opt.'] : ['React', 'Tailwind CSS', 'Figma'];
+  const techStack = isZabs ? ['React', 'Vite', 'Tailwind CSS v4', 'Web3Forms', 'Poppins', 'Netlify'] : cs.slug === 'ms-stationery' ? ['Shopify', 'Liquid', 'Figma', 'Custom Theme', 'SEO', 'WhatsApp API'] : cs.slug === 'glamouria' ? ['Shopify', 'Liquid', 'Figma', 'Klaviyo', 'Speed Opt.'] : cs.slug === 'us-global-star-trading' ? ['React', 'Vite', 'Tailwind CSS', 'Charts', 'SEO'] : cs.slug === 'aemtech-website' ? ['React 19', 'Vite 7', 'Tailwind CSS v4', 'SEO', 'Schema.org'] : ['Figma', 'Brand Identity', 'Print Design'];
 
   return (<main>
     {/* ═══ CINEMATIC HERO ═══ */}
@@ -983,7 +989,7 @@ export function CaseStudyPage({ goTo, slug }: PageProps & { slug: string }) {
           <span style={{ color: 'var(--gold)' }}>{cs.name}</span>
         </div>
         <div className="cch-content">
-          {isZabs && <div className="cch-flag"><Icon name="🌍" size={16} style={{ display:'inline-block',verticalAlign:'middle',marginRight:6 }} />First International Project</div>}
+          {cs.international && <div className="cch-flag"><Icon name="🌍" size={16} style={{ display:'inline-block',verticalAlign:'middle',marginRight:6 }} />International Project</div>}
           <div className="cch-category">{cs.category}</div>
           <h1 className="cch-title">{cs.name}</h1>
           <p className="cch-tagline">{cs.tagline}</p>
@@ -997,7 +1003,7 @@ export function CaseStudyPage({ goTo, slug }: PageProps & { slug: string }) {
 
           {/* CTAs */}
           <div className="cch-actions">
-            {isZabs && <a className="btn btn-gold btn-glow" href="https://zabsinternational.com" target="_blank" rel="noopener noreferrer">View Live Website <span>→</span></a>}
+            {cs.liveUrl && <a className="btn btn-gold btn-glow" href={cs.liveUrl} target="_blank" rel="noopener noreferrer">View Live Website <span>→</span></a>}
             <button className="btn btn-outline" onClick={() => goTo('contact')}>Start Similar Project <span>→</span></button>
           </div>
         </div>
@@ -1273,6 +1279,7 @@ export function CaseStudyPage({ goTo, slug }: PageProps & { slug: string }) {
     </>)}
     <section className="section-pad" style={{ background: 'var(--ink)', borderBlock: '1px solid var(--line-soft)' }}><div className="container"><R className="center-head"><p className="eyebrow">Our Process</p><h2>How We <span>Built It</span></h2></R><div className="process-timeline">{cs.process.map((s, i) => (<R key={s.step}><div className={`process-step ${i % 2 === 0 ? 'left' : 'right'}`}><div className="ps-number"><span style={{ fontSize: 14 }}>{s.step}</span></div><div className="ps-card"><div className="ps-step-badge">Step {s.step}</div><h3>{s.title}</h3><p>{s.desc}</p></div></div></R>))}<div className="process-line" /></div></div></section>
     <section className="section-pad"><div className="container" style={{ maxWidth: 860 }}><R className="center-head"><p className="eyebrow">Deliverables</p><h2>What We <span>Delivered</span></h2></R><R><div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 12 }}>{cs.features.map((f, i) => (<div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '14px 18px', border: '1px solid var(--line-soft)', borderRadius: 10, background: 'rgba(255,255,255,0.03)' }}><span style={{ color: 'var(--gold)', fontWeight: 800 }}>✓</span><span style={{ color: '#dedede', fontSize: 13 }}>{f}</span></div>))}</div></R></div></section>
+    {cs.gallery && cs.gallery.length > 0 && (<section className="section-pad" style={{ background: 'var(--ink)', borderBlock: '1px solid var(--line-soft)' }}><div className="container"><R className="center-head"><p className="eyebrow">Showcase</p><h2>Project <span>Gallery</span></h2></R><div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 20 }}>{cs.gallery.map((g, i) => (<R key={i}><figure style={{ margin: 0, border: '1px solid var(--line-soft)', borderRadius: 12, overflow: 'hidden', background: 'rgba(255,255,255,0.02)' }}><div style={{ aspectRatio: '16/10', overflow: 'hidden', background: '#111' }}><img src={g.src} alt={`${cs.name}: ${g.caption}`} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} /></div><figcaption style={{ padding: '12px 16px', color: 'var(--muted)', fontSize: 12 }}>{g.caption}</figcaption></figure></R>))}</div></div></section>)}
     {cs.testimonial && (<section className="section-pad" style={{ background: 'var(--ink)', borderBlock: '1px solid var(--line-soft)' }}><div className="container" style={{ maxWidth: 760, textAlign: 'center' }}><R><div style={{ padding: '48px 36px', border: '1px solid var(--line-soft)', borderRadius: 20, background: 'linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015))' }}><div style={{ fontSize: 56, color: 'var(--gold)', opacity: 0.3, marginBottom: 12, fontFamily: 'Georgia,serif', lineHeight: 1 }}>"</div><p style={{ color: '#e8e8e8', fontSize: 20, lineHeight: 1.7, fontStyle: 'italic', marginBottom: 28 }}>{cs.testimonial.text}</p><div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14 }}><div style={{ width: 50, height: 50, display: 'grid', placeItems: 'center', borderRadius: '50%', background: 'linear-gradient(135deg, var(--gold), #d4a833)', color: '#080808', fontSize: 18, fontWeight: 800 }}>{cs.testimonial.name[0]}</div><div style={{ textAlign: 'left' }}><strong style={{ display: 'block', fontSize: 15 }}>{cs.testimonial.name}</strong><span style={{ color: 'var(--muted)', fontSize: 13 }}>{cs.testimonial.role}</span></div></div></div></R></div></section>)}
     <section className="final-cta-premium"><div className="fcp-bg"><div className="fcp-gradient" /><div className="fcp-grid" /></div><div className="container fcp-content reveal visible">{nx ? (<><p className="eyebrow">Next Case Study</p><h2>{nx.name}: <span>{nx.category}</span></h2><p>{nx.tagline}</p><div className="fcp-actions"><button className="btn btn-gold" onClick={() => goTo(`case-${nx.slug}`)}>View Case Study <span>→</span></button><button className="btn btn-outline" onClick={() => goTo('contact')}>Start Your Project <span>→</span></button></div></>) : (<><p className="eyebrow">Inspired?</p><h2>Let's Build Something <span>Like This</span> For You</h2><p>Get a premium digital experience tailored to your brand.</p><div className="fcp-actions"><button className="btn btn-gold btn-glow" onClick={() => goTo('contact')}>Start Your Project <span>→</span></button><a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp <span>💬</span></a></div></>)}</div></section>
   </main>);
