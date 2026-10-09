@@ -42,6 +42,33 @@ function R({ children, className = '' }: { children: React.ReactNode; className?
   return <div ref={ref} className={`reveal ${className}`}>{children}</div>;
 }
 
+function CountUp({ target, suffix = '', duration = 1400 }: { target: number; suffix?: string; duration?: number }) {
+  const [val, setVal] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const started = useRef(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(([e]) => {
+      if (e.isIntersecting && !started.current) {
+        started.current = true;
+        const t0 = performance.now();
+        const tick = (t: number) => {
+          const p = Math.min((t - t0) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          setVal(Math.round(eased * target));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        obs.disconnect();
+      }
+    }, { threshold: 0.4 });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [target, duration]);
+  return <span ref={ref}>{val}{suffix}</span>;
+}
+
 function getPageFromLocation() {
   const path = window.location.pathname.replace(/\/+$/, '') || '/';
   if (path === '/about') return 'about';
@@ -534,17 +561,17 @@ export default function App() {
               {/* Quick Stats */}
               <div className="hero-stats">
                 <div className="hero-stat">
-                  <strong>10+</strong>
+                  <strong><CountUp target={10} suffix="+" /></strong>
                   <span>Projects Delivered</span>
                 </div>
                 <div className="hero-stat-divider" />
                 <div className="hero-stat">
-                  <strong>100%</strong>
+                  <strong><CountUp target={100} suffix="%" /></strong>
                   <span>Client Satisfaction</span>
                 </div>
                 <div className="hero-stat-divider" />
                 <div className="hero-stat">
-                  <strong>12hr</strong>
+                  <strong><CountUp target={12} suffix="hr" /></strong>
                   <span>Avg Reply Time</span>
                 </div>
               </div>
@@ -598,6 +625,16 @@ export default function App() {
           <div className="marquee">
             <div className="marquee-track">
               {['Adobe','Figma','Meta','Google','Klaviyo','Shopify','Canva','Webflow','Framer','Adobe','Figma','Meta','Google','Klaviyo','Shopify','Canva','Webflow','Framer'].map((b, i) => <span key={i}>{b}</span>)}
+            </div>
+          </div>
+        </section>
+
+        {/* ═══ CLIENT MARQUEE ═══ */}
+        <section className="trusted section-tight">
+          <div className="container"><p className="section-kicker">Brands we've built for</p></div>
+          <div className="marquee marquee-clients">
+            <div className="marquee-track">
+              {['ZABS International','US Global Star Trading','B.Y.H World','M.S Enterprise','S.R Global','MS Stationery','Glam Shlam','EL Hombre','ZABS International','US Global Star Trading','B.Y.H World','M.S Enterprise','S.R Global','MS Stationery','Glam Shlam','EL Hombre'].map((b, i) => <span key={i}>{b}</span>)}
             </div>
           </div>
         </section>
@@ -715,33 +752,29 @@ export default function App() {
             {/* SECONDARY WORK */}
             <div className="portfolio-grid-premium">
               {[
-                { cat: 'Brand Identity', name: 'B.Y.H World', sub: 'Furniture & Interiors, Karachi', stat: '16', statLabel: 'Brand Assets', color: '#c9a227', cs: 'byh-world' },
-                { cat: 'Brand Identity', name: 'MS Stationery', sub: 'Stationery & Office Supplies', stat: '4', statLabel: 'Creative Stages', color: '#f5c542', cs: 'ms-stationery' },
-                { cat: 'Website', name: 'US Global Star Trading', sub: 'Fintech, USA', stat: '5', statLabel: 'Asset Classes', color: '#c9a227', cs: 'us-global-star-trading' },
-                { cat: 'Brand Identity', name: 'S.R Global', sub: 'Furniture, Karachi', stat: '3', statLabel: 'Brand Assets', color: '#c9a227', cs: 'sr-global' },
+                { cat: 'Brand Identity', name: 'B.Y.H World', sub: 'Furniture & Interiors, Karachi', stat: '16', statLabel: 'Brand Assets', color: '#c9a227', cs: 'byh-world', image: '/images/portfolio/byh-world/logo-black.png' },
+                { cat: 'Brand Identity', name: 'MS Stationery', sub: 'Stationery & Office Supplies', stat: '4', statLabel: 'Creative Stages', color: '#f5c542', cs: 'ms-stationery', image: '/images/portfolio/ms-stationery/logo-badge.png' },
+                { cat: 'Website', name: 'US Global Star Trading', sub: 'Fintech, USA', stat: '5', statLabel: 'Asset Classes', color: '#c9a227', cs: 'us-global-star-trading', image: '/images/portfolio/usgst/hero.png' },
+                { cat: 'Brand Identity', name: 'S.R Global', sub: 'Furniture, Karachi', stat: '3', statLabel: 'Brand Assets', color: '#c9a227', cs: 'sr-global', image: '/images/portfolio/sr-global/logo.png' },
               ].map((p, i) => (
                 <R key={i}>
-                  <article className="portfolio-card-premium" style={{ '--pc': p.color } as React.CSSProperties} onMouseMove={handleTilt} onMouseLeave={resetTilt}>
-                    <div className="pcp-image">
-                      <span className="pcp-letter" aria-hidden="true">{p.name[0]}</span>
-                      <span className="pcp-word" aria-hidden="true">{p.name}</span>
-                      <div className="pcp-overlay">
-                        {p.cs ? (
-                          <a className="btn btn-gold" href={`/case-studies/${p.cs}`} onClick={e => { e.preventDefault(); goTo(`case-${p.cs}`); }}>Case Study <span>→</span></a>
-                        ) : (
-                          <a className="btn btn-gold" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Get Similar <span>→</span></a>
-                        )}
+                  <article className="portfolio-card-premium pcp-visual" style={{ '--pc': p.color } as React.CSSProperties} onMouseMove={handleTilt} onMouseLeave={resetTilt}>
+                    <a className="pcp-hit" href={`/case-studies/${p.cs}`} onClick={e => { e.preventDefault(); goTo(`case-${p.cs}`); }} aria-label={`${p.name} case study`}>
+                      <div className="pcp-visual-img">
+                        <img src={p.image} alt={p.name} loading="lazy" onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
                       </div>
-                    </div>
-                    <div className="pcp-content">
-                      <div className="pcp-cat">{p.cat}</div>
-                      <h3>{p.name}</h3>
-                      <p>{p.sub}</p>
-                      <div className="pcp-stat">
-                        <strong style={{ color: p.color }}>{p.stat}</strong>
-                        <span>{p.statLabel}</span>
+                      <div className="pcp-visual-label">
+                        <span className="pcp-visual-cat">{p.cat}</span>
+                        <strong>{p.name}</strong>
                       </div>
-                    </div>
+                      <div className="pcp-visual-overlay">
+                        <span className="pcp-visual-cat">{p.cat}</span>
+                        <h3>{p.name}</h3>
+                        <p>{p.sub}</p>
+                        <div className="pcp-visual-stat"><strong style={{ color: p.color }}>{p.stat}</strong><span>{p.statLabel}</span></div>
+                        <span className="pcp-visual-cta">View Case Study <span>&rarr;</span></span>
+                      </div>
+                    </a>
                   </article>
                 </R>
               ))}

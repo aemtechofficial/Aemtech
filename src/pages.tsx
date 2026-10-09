@@ -210,32 +210,28 @@ export function PortfolioPage({ goTo }: PageProps) {
         <div className="portfolio-grid-premium">
           {filtered.map((p, i) => (
             <R key={p.name + i}>
-              <article className="portfolio-card-premium">
-                <div className="pcp-image">
-                  {p.image ? (
-                    <img src={p.image} alt={p.name} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
-                  ) : (
-                    <span className="pcp-letter" style={{ color: p.color }}>{p.name[0]}</span>
-                  )}
-                  {p.badge && <div className="pcp-project-badge">{p.badge}</div>}
-                  <div className="pcp-overlay">
-                    {p.caseStudy ? (
-                      <a className="btn btn-gold" href={`/case-studies/${p.caseStudy}`} onClick={e => { e.preventDefault(); goTo(`case-${p.caseStudy}`); }} style={{ fontSize: 12 }}>View Case Study <span>→</span></a>
+              <article className="portfolio-card-premium pcp-visual">
+                <a className="pcp-hit" href={p.caseStudy ? `/case-studies/${p.caseStudy}` : '/contact'} onClick={e => { e.preventDefault(); goTo(p.caseStudy ? `case-${p.caseStudy}` : 'contact'); }} aria-label={`${p.name} case study`}>
+                  <div className="pcp-visual-img">
+                    {p.image ? (
+                      <img src={p.image} alt={p.name} loading="lazy" onError={e => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }} />
                     ) : (
-                      <a className="btn btn-gold" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }} style={{ fontSize: 12 }}>Get Similar <span>→</span></a>
+                      <span className="pcp-letter" style={{ color: p.color }}>{p.name[0]}</span>
                     )}
                   </div>
-                </div>
-                <div className="pcp-content">
-                  <div className="pcp-cat">{p.cat}</div>
-                  <h3>{p.name}</h3>
-                  <p>{p.sub}</p>
-                  <p style={{ color: 'var(--muted)', fontSize: 12, lineHeight: 1.6, marginBottom: 14 }}>{p.desc}</p>
-                  <div className="pcp-stat">
-                    <strong style={{ color: p.color }}>{p.stat}</strong>
-                    <span>{p.statLabel}</span>
+                  {p.badge && <div className="pcp-project-badge">{p.badge}</div>}
+                  <div className="pcp-visual-label">
+                    <span className="pcp-visual-cat">{p.cat}</span>
+                    <strong>{p.name}</strong>
                   </div>
-                </div>
+                  <div className="pcp-visual-overlay">
+                    <span className="pcp-visual-cat">{p.cat}</span>
+                    <h3>{p.name}</h3>
+                    <p>{p.sub}</p>
+                    <div className="pcp-visual-stat"><strong style={{ color: p.color }}>{p.stat}</strong><span>{p.statLabel}</span></div>
+                    <span className="pcp-visual-cta">View Case Study <span>&rarr;</span></span>
+                  </div>
+                </a>
               </article>
             </R>
           ))}
