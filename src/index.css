@@ -1030,6 +1030,14 @@ img[loading="lazy"]{content-visibility:auto}
 .marquee-clients .marquee-track{animation-duration:32s}
 .marquee-clients .marquee-track span{color:var(--gold);font-size:20px}
 .marquee-clients .marquee-track span::after{color:rgba(245,197,66,0.4)}
+/* ═══ CLIENT LOGO WALL ═══ */
+.logo-wall{align-items:center}
+.logo-wall img{height:46px;width:auto;opacity:.72;transition:opacity .3s ease,transform .3s ease}
+.logo-wall img:hover{opacity:1;transform:scale(1.06)}
+.marquee-clients .logo-wall .lw-word{font-size:18px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#fff;opacity:.72;white-space:nowrap;transition:opacity .3s ease}
+.logo-wall .lw-word:hover{opacity:1}
+.logo-wall .lw-word::after{display:none}
+@media(max-width:640px){.logo-wall img{height:36px}.marquee-clients .logo-wall .lw-word{font-size:15px}}
 
 .reveal{opacity:0;transform:translateY(28px);filter:blur(6px);transition:opacity .5s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1),filter .5s cubic-bezier(.4,0,.2,1)}
 .reveal.visible{opacity:1;transform:translateY(0);filter:blur(0)}

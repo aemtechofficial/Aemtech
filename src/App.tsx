@@ -710,8 +710,23 @@ export default function App() {
         <section className="trusted section-tight">
           <div className="container"><p className="section-kicker">Brands we've built for</p></div>
           <div className="marquee marquee-clients">
-            <div className="marquee-track">
-              {['ZABS International','US Global Star Trading','B.Y.H World','M.S Enterprise','S.R Global','MS Stationery','Glam Shlam','EL Hombre','ZABS International','US Global Star Trading','B.Y.H World','M.S Enterprise','S.R Global','MS Stationery','Glam Shlam','EL Hombre'].map((b, i) => <span key={i}>{b}</span>)}
+            <div className="marquee-track logo-wall">
+              {[0, 1].flatMap(dup =>
+                ([
+                  { img: '/images/clients/byh-world.png', name: 'B.Y.H World' },
+                  { img: '/images/clients/ms-enterprise.png', name: 'M.S Enterprise' },
+                  { img: '/images/clients/sr-global.png', name: 'S.R Global' },
+                  { name: 'ZABS International' },
+                  { name: 'US Global Star Trading' },
+                  { name: 'MS Stationery' },
+                  { name: 'Glam Shlam' },
+                  { name: 'EL Hombre' },
+                ] as { img?: string; name: string }[]).map((c, i) =>
+                  c.img
+                    ? <img key={dup + '-' + i} src={c.img} alt={c.name} />
+                    : <span key={dup + '-' + i} className="lw-word">{c.name}</span>
+                )
+              )}
             </div>
           </div>
         </section>
