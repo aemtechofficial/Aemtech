@@ -126,6 +126,8 @@ export const allCaseStudies: CaseStudy[] = [
       'Brand guidelines document',
     ],
     gallery: [
+      { src: '/images/portfolio/ms-stationery/brand-ms-stationery-identity.png', caption: 'Brand presentation: full identity on black and gold' },
+      { src: '/images/portfolio/ms-stationery/brand-ms-stationery-system.png', caption: 'Brand presentation: identity system showcase' },
       { src: '/images/portfolio/ms-stationery/design-journey.png', caption: 'Full design journey, from sketch to final logo' },
       { src: '/images/portfolio/ms-stationery/logo-badge.png', caption: 'Final logo badge' },
       { src: '/images/portfolio/ms-stationery/hero-3d-logo.png', caption: '3D hero logo treatment' },
@@ -182,6 +184,8 @@ export const allCaseStudies: CaseStudy[] = [
       'Deployed on Netlify',
     ],
     gallery: [
+      { src: '/images/portfolio/zabs/web-zabs-hero.png', caption: 'Website presentation: hero on dark display' },
+      { src: '/images/portfolio/zabs/web-zabs-pages.png', caption: 'Website presentation: page system showcase' },
       { src: '/images/portfolio/zabs/hero.png', caption: 'Homepage hero' },
       { src: '/images/portfolio/zabs/mission.png', caption: 'Mission section' },
       { src: '/images/portfolio/zabs/services.png', caption: 'Services overview' },
@@ -230,6 +234,8 @@ export const allCaseStudies: CaseStudy[] = [
       'Gold-on-black identity system',
     ],
     gallery: [
+      { src: '/images/portfolio/byh-world/brand-byh-logos.png', caption: 'Brand presentation: logo system on black and gold' },
+      { src: '/images/portfolio/byh-world/brand-byh-stationery.png', caption: 'Brand presentation: stationery showcase' },
       { src: '/images/portfolio/byh-world/logo-black.png', caption: 'Primary logo, black version' },
       { src: '/images/portfolio/byh-world/logo-white.png', caption: 'Logo, white version' },
       { src: '/images/portfolio/byh-world/card-rehan.png', caption: 'Business card design' },
@@ -272,6 +278,7 @@ export const allCaseStudies: CaseStudy[] = [
       'Document templates',
     ],
     gallery: [
+      { src: '/images/portfolio/ms-enterprise/brand-ms-enterprise.png', caption: 'Brand presentation: identity on black and gold' },
       { src: '/images/portfolio/ms-enterprise/logo.png', caption: 'M.S Enterprise logo' },
       { src: '/images/portfolio/ms-enterprise/letterhead.png', caption: 'Branded letterhead' },
     ],
@@ -308,6 +315,7 @@ export const allCaseStudies: CaseStudy[] = [
       'Tagline lockup system',
     ],
     gallery: [
+      { src: '/images/portfolio/sr-global/brand-sr-global.png', caption: 'Brand presentation: identity on black and gold' },
       { src: '/images/portfolio/sr-global/logo.png', caption: 'S.R Global gold logo' },
       { src: '/images/portfolio/sr-global/letterhead.png', caption: 'Branded letterhead' },
     ],
@@ -348,6 +356,8 @@ export const allCaseStudies: CaseStudy[] = [
       'Risk disclaimer compliance',
     ],
     gallery: [
+      { src: '/images/portfolio/usgst/web-usgst-hero.png', caption: 'Website presentation: hero on dark display' },
+      { src: '/images/portfolio/usgst/web-usgst-pages.png', caption: 'Website presentation: page system showcase' },
       { src: '/images/portfolio/usgst/hero.png', caption: 'Homepage hero' },
       { src: '/images/portfolio/usgst/trading-tech.png', caption: 'Trading technology' },
       { src: '/images/portfolio/usgst/dashboard.png', caption: 'Dashboard preview' },
@@ -395,6 +405,8 @@ export const allCaseStudies: CaseStudy[] = [
       'Number one Google ranking',
     ],
     gallery: [
+      { src: '/images/portfolio/aemtech/web-aemtech-hero.png', caption: 'Website presentation: hero on dark display' },
+      { src: '/images/portfolio/aemtech/web-aemtech-pages.png', caption: 'Website presentation: page system showcase' },
       { src: '/images/portfolio/aemtech/hero.png', caption: 'Homepage hero' },
       { src: '/images/portfolio/aemtech/services.png', caption: 'Services section' },
       { src: '/images/portfolio/aemtech/portfolio.png', caption: 'Portfolio page' },
