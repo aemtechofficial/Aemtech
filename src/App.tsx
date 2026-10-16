@@ -390,6 +390,7 @@ export default function App() {
     { label: 'About', page: 'about', href: '/about', matchPage: true },
     { label: 'Services', page: 'services', href: '/services', matchPage: true },
     { label: 'Portfolio', page: 'portfolio', href: '/portfolio', matchPage: true },
+    { label: 'Blog', page: 'blog', href: '/blog', matchPage: true },
     { label: 'Team', page: 'home', href: '#team', matchPage: false },
     { label: 'Contact', page: 'contact', href: '/contact', matchPage: true },
   ];
@@ -1205,6 +1206,7 @@ export default function App() {
             <a href="/about" onClick={e => { e.preventDefault(); goTo('about'); }}>About Us</a>
             <a href="/services" onClick={e => { e.preventDefault(); goTo('services'); }}>Services</a>
             <a href="/portfolio" onClick={e => { e.preventDefault(); goTo('portfolio'); }}>Portfolio</a>
+            <a href="/blog" onClick={e => { e.preventDefault(); goTo('blog'); }}>Blog</a>
             <a href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Contact</a>
           </div>
           <div>
