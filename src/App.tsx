@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { ServicesPage, PortfolioPage, AboutPage, BlogPage, ContactPage, SingleServicePage, CaseStudyPage } from './pages';
+import { ServicesPage, PortfolioPage, AboutPage, BlogPage, BlogArticlePage, ContactPage, SingleServicePage, CaseStudyPage } from './pages';
 import { allServices } from './serviceData';
 import { allCaseStudies } from './caseStudyData';
+import { blogArticles } from './blogData';
 import { Icon } from './designIcons';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
@@ -78,6 +79,7 @@ function getPageFromLocation() {
   if (path === '/contact') return 'contact';
   if (path.startsWith('/services/')) return `service-${path.split('/').filter(Boolean)[1]}`;
   if (path.startsWith('/case-studies/')) return `case-${path.split('/').filter(Boolean)[1]}`;
+  if (path.startsWith('/blog/')) return `article-${path.split('/').filter(Boolean)[1]}`;
 
   // Support old shared hash URLs and migrate them after the app mounts.
   const hash = window.location.hash.replace(/^#/, '');
@@ -90,6 +92,7 @@ function pageToPath(page: string) {
   if (page === 'home') return '/';
   if (page.startsWith('service-')) return `/services/${page.replace('service-', '')}`;
   if (page.startsWith('case-')) return `/case-studies/${page.replace('case-', '')}`;
+  if (page.startsWith('article-')) return `/blog/${page.replace('article-', '')}`;
   return `/${page}`;
 }
 
@@ -209,6 +212,7 @@ export default function App() {
   useEffect(() => {
     const service = page.startsWith('service-') ? allServices.find(item => `service-${item.slug}` === page) : undefined;
     const study = page.startsWith('case-') ? allCaseStudies.find(item => `case-${item.slug}` === page) : undefined;
+    const article = page.startsWith('article-') ? blogArticles.find(item => `article-${item.slug}` === page) : undefined;
     const titles: Record<string, string> = {
       home: 'AEMTECH | Premium Creative & Marketing Agency',
       about: 'About AEMTECH | Creative & Marketing Agency',
@@ -228,8 +232,10 @@ export default function App() {
       ? `${service.title} | AEMTECH Creative & Marketing Agency`
       : study
         ? `${study.name} Case Study | AEMTECH`
-        : titles[page] || titles.home;
-    const description = service?.short || study?.tagline || descriptions[page] || descriptions.home;
+        : article
+          ? `${article.title} | AEMTECH Blog`
+          : titles[page] || titles.home;
+    const description = service?.short || study?.tagline || article?.excerpt || descriptions[page] || descriptions.home;
     const canonicalUrl = `https://aemtechofficial.com${pageToPath(page)}`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', description);
     document.querySelector('meta[property="og:title"]')?.setAttribute('content', document.title);
@@ -524,6 +530,7 @@ export default function App() {
         {page === 'contact' && <ContactPage goTo={goTo} />}
         {page.startsWith('service-') && <SingleServicePage goTo={goTo} slug={page.replace('service-', '')} />}
         {page.startsWith('case-') && <CaseStudyPage goTo={goTo} slug={page.replace('case-', '')} />}
+        {page.startsWith('article-') && <BlogArticlePage goTo={goTo} slug={page.replace('article-', '')} />}
       </div>
 
       {/* ═══ HOMEPAGE ═══ */}
@@ -1019,6 +1026,7 @@ export default function App() {
               <a className="btn btn-gold btn-glow" href="/contact" onClick={e => { e.preventDefault(); goTo('contact'); }}>Start Your Project <span>→</span></a>
               <a className="btn btn-outline" href="https://wa.me/923310009519" target="_blank" rel="noopener noreferrer">WhatsApp Chat <span><Icon name="💬" size={16} /></span></a>
             </div>
+            <p className="fcp-audit-note">Not ready to commit? <a href="https://wa.me/923310009519?text=Hi!%20I%20want%20a%20FREE%20brand%20audit%20for%20my%20business." target="_blank" rel="noopener noreferrer">Get a free brand audit</a> first, no strings attached.</p>
             <div className="fcp-trust">
               <span><Icon name="🛡" size={14} /> NDA Protected</span>
               <span><Icon name="⚡" size={14} /> Same Day Reply</span>

@@ -4,6 +4,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { allServices } from './serviceData';
 import { allCaseStudies } from './caseStudyData';
+import { blogArticles } from './blogData';
 import { Icon } from './designIcons';
 
 function useAnimatedNumber(target: number, decimals: number, inView: boolean) {
@@ -382,20 +383,78 @@ export function AboutPage({ goTo }: PageProps) {
 export function BlogPage({ goTo }: PageProps) {
   return (
     <main>
-      <PageHero goTo={goTo} eyebrow="Blog" title={<>Creative thinking and marketing ideas for ambitious <span>brands.</span></>} desc="Insights on branding, campaign strategy, graphic design, social media, performance marketing, websites, and ecommerce." />
-      <section className="section-pad"><div className="container" style={{ maxWidth: 700 }}>
-        <R><div className="cs-story-block">
-          <div className="csb-icon" style={{ fontSize: 56 }}>📝</div>
-          <h2>Coming <span>Soon</span></h2>
-          <p className="csb-text">We're preparing practical articles on brand strategy, visual identity, content, social media, digital campaigns, web design, and ecommerce. Real insights from real projects.</p>
-          <div className="csb-services">
-            {['Brand Strategy', 'Creative Direction', 'Social Media', 'Marketing Insights', 'Case Studies'].map(t => <span key={t}>{t}</span>)}
-          </div>
-          <div style={{ marginTop: 28 }}>
-            <button className="btn btn-gold btn-glow" onClick={() => goTo('contact')}>Get Notified When We Launch <span>→</span></button>
-          </div>
-        </div></R>
+      <PageHero goTo={goTo} eyebrow="Blog" title={<>Creative thinking and marketing ideas for ambitious <span>brands.</span></>} desc="Practical insights on branding, logo design, web design, social media, and digital marketing, from real client work." />
+      <section className="section-pad"><div className="container">
+        <div className="blog-grid">
+          {blogArticles.map(a => (
+            <R key={a.slug}>
+              <article className="blog-card">
+                <div className="blog-card-top">
+                  <span className="blog-cat">{a.category}</span>
+                  <span className="blog-date">{a.date} · {a.readTime}</span>
+                </div>
+                <h2>{a.title}</h2>
+                <p>{a.excerpt}</p>
+                <button className="blog-read" onClick={() => goTo(`article-${a.slug}`)}>Read Article <span>→</span></button>
+              </article>
+            </R>
+          ))}
+        </div>
       </div></section>
+    </main>
+  );
+}
+
+/* BLOG ARTICLE: single post */
+export function BlogArticlePage({ goTo, slug }: PageProps & { slug: string }) {
+  const article = blogArticles.find(a => a.slug === slug);
+  if (!article) {
+    return (
+      <main>
+        <PageHero goTo={goTo} eyebrow="Blog" title={<>Article <span>not found.</span></>} desc="This article does not exist or was moved." />
+        <section className="section-pad"><div className="container" style={{ textAlign: 'center' }}>
+          <button className="btn btn-gold" onClick={() => goTo('blog')}>Back to Blog <span>→</span></button>
+        </div></section>
+      </main>
+    );
+  }
+  return (
+    <main>
+      <article className="blog-article">
+        <div className="container" style={{ maxWidth: 780 }}>
+          <R>
+            <button className="blog-back" onClick={() => goTo('blog')}>← All Articles</button>
+            <div className="blog-card-top" style={{ marginTop: 12 }}>
+              <span className="blog-cat">{article.category}</span>
+              <span className="blog-date">{article.date} · {article.readTime}</span>
+            </div>
+            <h1 className="blog-title">{article.title}</h1>
+            <p className="blog-excerpt">{article.excerpt}</p>
+          </R>
+          <R>
+            <div className="blog-body">
+              {article.content.map((b, i) => (
+                <div key={i}>
+                  {b.h && <h2>{b.h}</h2>}
+                  {b.p && <p>{b.p}</p>}
+                  {b.list && <ul>{b.list.map((li, j) => <li key={j}>{li}</li>)}</ul>}
+                  {b.quote && <blockquote>{b.quote}</blockquote>}
+                </div>
+              ))}
+            </div>
+          </R>
+          <R>
+            <div className="blog-cta">
+              <h3>Need help with your <span>brand?</span></h3>
+              <p>We do branding, websites, and marketing for ambitious businesses. Get a free audit of where you stand.</p>
+              <div className="blog-cta-actions">
+                <button className="btn btn-gold btn-glow" onClick={() => goTo('contact')}>Start Your Project <span>→</span></button>
+                <a className="btn btn-outline" href="https://wa.me/923310009519?text=Hi!%20I%20read%20your%20article%20and%20want%20a%20FREE%20brand%20audit." target="_blank" rel="noopener noreferrer">Free Brand Audit</a>
+              </div>
+            </div>
+          </R>
+        </div>
+      </article>
     </main>
   );
 }

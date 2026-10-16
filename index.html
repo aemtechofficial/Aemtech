@@ -6,6 +6,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="google-site-verification" content="CvazHdl-9ZpZMYuWd4TxuY4FFsxlnSKR23C1Rtp1RSQ" />
 
+  <!-- ═══ ANALYTICS: GA4 + Meta Pixel (IDs needed from Fawaz) ═══ -->
+  <!-- GA4: replace G-XXXXXXXXXX with the Measurement ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- Meta Pixel: replace 000000000000000 with the Pixel ID from business.facebook.com > Events Manager -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '000000000000000');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" alt=""
+    src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1" /></noscript>
+  <!-- ═══ /ANALYTICS ═══ -->
+
   <!-- Primary SEO -->
   <title>AEMTECH | Premium Creative & Marketing Agency in Karachi</title>
   <meta name="description" content="AEMTECH is a creative and marketing agency in Karachi for branding, graphic design, social media, digital campaigns, websites, SEO, and ecommerce." />
